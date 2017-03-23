@@ -1,3 +1,6 @@
+
+/*********          SEARCH BAR            *********/
+
 .cover-index  {
   height:45vh;
   width:100%;
@@ -14,12 +17,6 @@
   border-radius: 10px;
 }
 
-.flex-checks{
-  display: flex;
-  flex-basis: 40%;
-  align-items: center;
-  color: white;
-}
 
 .flex-form{
 
@@ -39,7 +36,7 @@
     border-top: 1px solid #cc8d3b;
     border-bottom: 1px solid #cc8d3b;
     color: #fff;
-    flex-basis: 100%;
+    flex-basis: 10%;
   }
 
   * {
@@ -58,6 +55,18 @@
   }
 }
 
+.flex-checks{
+  display: flex;
+  flex-basis: 40%;
+  align-items: center;
+  color: white;
+
+  input {
+    margin-left: 15px;
+  }
+}
+
+/*********          SUGGESTED TRAVELS            *********/
 .suggested-travels {
   text-align: center;
 }
@@ -97,6 +106,8 @@
   } 
 }
 
+
+/*********          SUGGESTED TRAVELS BASED ON CALENDAR            *********/
 .suggestions-calendar {
   text-align: center;
 }

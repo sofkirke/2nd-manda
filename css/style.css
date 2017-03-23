@@ -1,3 +1,4 @@
+/*********          SEARCH BAR            *********/
 .cover-index {
   height: 45vh;
   width: 100%;
@@ -12,12 +13,6 @@
   padding: 20px;
   border-radius: 10px; }
 
-.flex-checks {
-  display: flex;
-  flex-basis: 40%;
-  align-items: center;
-  color: white; }
-
 .flex-form {
   display: flex;
   flex-basis: 40%; }
@@ -31,7 +26,7 @@
     border-top: 1px solid #cc8d3b;
     border-bottom: 1px solid #cc8d3b;
     color: #fff;
-    flex-basis: 100%; }
+    flex-basis: 10%; }
   .flex-form * {
     border: 0;
     padding: 10px;
@@ -44,6 +39,15 @@
   .flex-form *:last-child {
     border-right: 0; }
 
+.flex-checks {
+  display: flex;
+  flex-basis: 40%;
+  align-items: center;
+  color: white; }
+  .flex-checks input {
+    margin-left: 15px; }
+
+/*********          SUGGESTED TRAVELS            *********/
 .suggested-travels {
   text-align: center; }
 
@@ -64,6 +68,7 @@
     background: linear-gradient(rgba(245, 130, 32, 0.6), rgba(245, 130, 32, 0.6)), url("http://geography.name/wp-content/uploads/2016/02/tokyo.jpg");
     background-size: cover; }
 
+/*********          SUGGESTED TRAVELS BASED ON CALENDAR            *********/
 .suggestions-calendar {
   text-align: center; }
 
