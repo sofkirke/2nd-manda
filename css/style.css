@@ -44,6 +44,26 @@
   .flex-form *:last-child {
     border-right: 0; }
 
+.suggested-travels {
+  text-align: center; }
+
+.sugg-travels {
+  display: flex; }
+  .sugg-travels .sugg {
+    flex-basis: 100%;
+    background-color: red;
+    margin: 10px;
+    height: 20vh; }
+  .sugg-travels .london {
+    background: linear-gradient(rgba(245, 130, 32, 0.6), rgba(245, 130, 32, 0.6)), url("https://media.timeout.com/images/100644443/image.jpg");
+    background-size: cover; }
+  .sugg-travels .newYork {
+    background: linear-gradient(rgba(245, 130, 32, 0.6), rgba(245, 130, 32, 0.6)), url("https://www.gentlegiant.com/wp-content/uploads/2015/06/New-York.jpg");
+    background-size: cover; }
+  .sugg-travels .tokyo {
+    background: linear-gradient(rgba(245, 130, 32, 0.6), rgba(245, 130, 32, 0.6)), url("http://geography.name/wp-content/uploads/2016/02/tokyo.jpg");
+    background-size: cover; }
+
 @media screen and (min-width: 501px) and (max-width: 1000px) {
   .flex-form {
     display: flex;
