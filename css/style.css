@@ -4,12 +4,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: src("img/london.jpg"); }
+  background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2015/11/London-%C2%A9-QQ7-Shutterstock-e1455618305877.jpg");
+  background-size: cover; }
+
+.search-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px; }
 
 .flex-checks {
   display: flex;
   flex-basis: 40%;
-  align-items: center; }
+  align-items: center;
+  color: white; }
 
 .flex-form {
   display: flex;
