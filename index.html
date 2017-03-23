@@ -28,21 +28,33 @@
     
 
 <body>
-  <div class="cover">
-    <form  class="flex-form">
-      <input type="search" placeholder="What's your destination?">
-      
-      <label for="from">From</label>
-      <input type="date" name="from">
+  <div class="cover-index">
 
-      <label for="from">To</label>
-      <input type="date" name="to">
+    <div class="search-bar">
 
-      <label for="people">Passengers</label>
-      <input type="number" min="1" max="10" value="1" name="people">
+      <form  class="flex-form">
+        <input type="search" placeholder="Departure airport">
+        <input type="search" placeholder="Destination">
+        
+        <label for="from">From</label>
+        <input type="date" name="from">
 
-      <input type="submit" value="Let's Go!">
-    </form>
+        <label for="from">To</label>
+        <input type="date" name="to">
+
+        <label for="people">Passengers</label>
+        <input type="number" min="1" max="10" value="1" name="people">
+
+        <input type="submit" value="Search">
+      </form>
+      <form class="flex-checks">
+        <input type="checkbox" name="check1" value="Bike">checkbox<br>
+        <input type="checkbox" name="check2" value="Bike">checkbox<br>
+        <input type="checkbox" name="check2" value="Bike">checkbox<br>
+      </form>
+
+    </div>
+    
   </div>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

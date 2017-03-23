@@ -1,8 +1,16 @@
-.cover  {
-  height:100vh;
+.cover-index  {
+  height:45vh;
   width:100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: src("img/london.jpg");
+}
+
+
+.flex-checks{
+  display: flex;
+  flex-basis: 40%;
   align-items: center;
 }
 
