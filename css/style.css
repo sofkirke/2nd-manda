@@ -83,7 +83,6 @@ body {
   font-family: sans-serif;
   border: 0;
   margin: 0;
-  line-height: 32px;
   font-size: 16px;
   outline: 0;
   -webkit-appearance: none; }
@@ -92,12 +91,13 @@ body {
   display: none; }
 
 .flex-nav {
-  background-color: #4A148C;
+  background-color: #48006A;
   height: 55px;
   display: flex;
   padding: 0 30px;
   align-items: center;
   flex-direction: row;
+  color: #F58220;
   justify-content: space-between;
   /* Flex Container */
   /* Flex Item */ }
@@ -117,9 +117,11 @@ body {
     .flex-nav .nav-left div {
       margin-left: 20px; }
   .flex-nav li {
-    margin-left: 20px; }
+    margin-left: 20px;
+    color: #5A5A5A; }
   .flex-nav a {
-    color: #fff; }
+    color: #F58220;
+    text-decoration: none; }
 
 @media screen and (min-width: 501px) and (max-width: 1000px) {
   .flex-nav ul {

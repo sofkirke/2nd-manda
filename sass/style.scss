@@ -11,7 +11,6 @@ body {
   font-family: sans-serif;
   border: 0;
   margin: 0;
-  line-height: 32px;
   font-size: 16px;
   outline: 0;
   -webkit-appearance: none; 
@@ -22,12 +21,13 @@ body {
 }
 
 .flex-nav{
-  background-color: #4A148C;
+  background-color: #48006A;
   height: 55px;
   display: flex;
   padding: 0 30px;
   align-items: center;
   flex-direction: row;
+  color: #F58220;
   justify-content: space-between;
   
   /* Flex Container */
@@ -52,16 +52,19 @@ body {
     div {
       margin-left: 20px;
 
+
     }
   }
 
   /* Flex Item */
   li {
     margin-left: 20px;
+    color: #5A5A5A;
   }
 
   a {
-    color: #fff;
+    color: #F58220;
+    text-decoration: none;
   }
 }
 
