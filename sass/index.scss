@@ -109,20 +109,21 @@
     background-color: red;
     margin: 10px;
     height: 100%;
+    color: white;
   }
 
   .paris {
     background:  linear-gradient(
-      rgba(72 ,0 ,106, 0.6), 
-      rgba(72 ,0 ,106, 0.6)
+      rgba(72 ,0 ,106, 0.8), 
+      rgba(72 ,0 ,106, 0.8)
     ), url("https://www.datasciencetech.institute/wp-content/uploads/2014/12/Eiffel-Tower-Paris-France.jpg");
     background-size: cover;
   }
 
   .malmo {
     background:  linear-gradient(
-      rgba(72 ,0 ,106, 0.6), 
-      rgba(72 ,0 ,106, 0.6)
+      rgba(72 ,0 ,106, 0.8), 
+      rgba(72 ,0 ,106, 0.8)
     ), url("http://www.shl.dk/wp-content/uploads/2016/03/SHL_Architects_Malm%C3%B6-Live_Malm%C3%B6-from-above_banner_image-1170x555.jpg");
     background-size: cover;
   }
