@@ -19,6 +19,15 @@
     border-bottom: 1px solid #cc8d3b;
     color: #fff;
     flex-basis: 100%; }
+  .flex-form * {
+    border: 0;
+    padding: 10px;
+    background: #fff;
+    line-height: 32px;
+    font-size: 16px;
+    outline: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none; }
   .flex-form *:last-child {
     border-right: 0; }
 
@@ -64,7 +73,6 @@ body {
   line-height: 32px;
   font-size: 16px;
   outline: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-appearance: none; }
 
 .toggleNav {
