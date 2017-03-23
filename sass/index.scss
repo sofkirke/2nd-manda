@@ -1,0 +1,99 @@
+.cover  {
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-form{
+
+  display: flex;
+  flex-basis: 40%;
+
+  *:not(input[type="date"]){
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    flex-wrap: wrap;
+    flex-basis: 75%;
+  }
+
+
+  input[type="submit"] {
+    background: #cc8d3b;
+    border-top: 1px solid #cc8d3b;
+    border-bottom: 1px solid #cc8d3b;
+    color: #fff;
+    flex-basis: 100%;
+  }
+
+  *:last-child {
+    border-right: 0;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+
+  
+  .flex-form{
+
+    display: flex;
+    flex-basis: 60%;
+    flex-wrap: wrap;
+
+
+    input[type="search"] {
+      flex-basis: 100%;
+    }
+
+    label {
+      flex-basis: 40%;
+    }
+
+    input[type="date"] {
+      flex-basis: 60%;
+    }
+
+    input[type="number"] {
+      flex-basis: 60%;
+    }
+
+    input[type="submit"] {
+      flex-basis: 100%;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  
+
+
+  .flex-form{
+
+    flex-basis: 90%;
+    flex-wrap: wrap;
+
+
+    input[type="search"] {
+      flex-basis: 100%;
+    }
+
+    label {
+      flex-basis: 40%;
+    }
+
+    input[type="date"] {
+      flex-basis: 60%;
+    }
+
+    input[type="number"] {
+      flex-basis: 60%;
+    }
+
+    input[type="submit"] {
+      flex-basis: 100%;
+    }
+  }
+}

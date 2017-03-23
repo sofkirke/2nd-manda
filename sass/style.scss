@@ -1,4 +1,7 @@
 @import "mixins.scss";
+@import "index.scss";
+@import "result.scss";
+@import "payment.scss";
 
 * {
   @include boxSizing(border-box);
@@ -6,24 +9,51 @@
 
 body {
   font-family: sans-serif;
+  border: 0;
   margin: 0;
-  background: #000;
+  line-height: 32px;
+  font-size: 16px;
+  outline: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-appearance: none; 
 }
-
 
 .toggleNav {
   display: none;
 }
 
 .flex-nav{
-  background-color: blue;
-  height: 30px;
+  background-color: #4A148C;
+  height: 55px;
+  display: flex;
+  padding: 0 30px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  
   /* Flex Container */
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+  }
+
+  .nav-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      display: flex;
+      align-items: center;
+      width: 45px;
+    }
+
+    div {
+      margin-left: 20px;
+
+    }
   }
 
   /* Flex Item */
@@ -36,51 +66,6 @@ body {
   }
 }
 
-.cover  {
-  height:100vh;
-  width:100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.flex-form{
-
-  display: flex;
-  flex-basis: 40%;
-
-  *:not(input[type="date"]){
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    flex-wrap: wrap;
-    flex-basis: 75%;
-  }
-
-
-  input[type="submit"] {
-    background: #cc8d3b;
-    border-top: 1px solid #cc8d3b;
-    border-bottom: 1px solid #cc8d3b;
-    color: #fff;
-    flex-basis: 100%;
-  }
-
-  * {
-    border: 0;
-    padding: 10px;
-    background: #fff;
-    line-height: 32px;
-    font-size: 16px;
-    outline: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    -webkit-appearance: none;
-  }
-
-  *:last-child {
-    border-right: 0;
-  }
-}
 
 @media screen and (min-width: 501px) and (max-width: 1000px) {
 
@@ -96,35 +81,6 @@ body {
     flex-basis: 25%;
   }
 
-  
-  .flex-form{
-
-    display: flex;
-    flex-basis: 60%;
-    flex-wrap: wrap;
-
-
-    input[type="search"] {
-      flex-basis: 100%;
-    }
-
-    label {
-      flex-basis: 40%;
-    }
-
-    input[type="date"] {
-      flex-basis: 60%;
-    }
-
-    input[type="number"] {
-      flex-basis: 60%;
-    }
-
-    input[type="submit"] {
-      flex-basis: 100%;
-    }
-
-  }
 
 }
 
@@ -149,33 +105,5 @@ body {
 
   .flex-nav ul.open {
     display: flex;
-  }
-
-
-  .flex-form{
-
-    flex-basis: 90%;
-    flex-wrap: wrap;
-
-
-    input[type="search"] {
-      flex-basis: 100%;
-    }
-
-    label {
-      flex-basis: 40%;
-    }
-
-    input[type="date"] {
-      flex-basis: 60%;
-    }
-
-    input[type="number"] {
-      flex-basis: 60%;
-    }
-
-    input[type="submit"] {
-      flex-basis: 100%;
-    }
   }
 }
