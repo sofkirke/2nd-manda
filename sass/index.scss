@@ -94,9 +94,38 @@
       rgba(245, 130, 32, 0.6)
     ), url("http://geography.name/wp-content/uploads/2016/02/tokyo.jpg");
     background-size: cover;
+  } 
+}
+
+.suggestions-calendar {
+  text-align: center;
+}
+
+.calendar-sugg {
+  display: flex;
+
+  .cale {
+    flex-basis: 100%;
+    background-color: red;
+    margin: 10px;
+    height: 100%;
   }
 
-  
+  .paris {
+    background:  linear-gradient(
+      rgba(72 ,0 ,106, 0.6), 
+      rgba(72 ,0 ,106, 0.6)
+    ), url("https://www.datasciencetech.institute/wp-content/uploads/2014/12/Eiffel-Tower-Paris-France.jpg");
+    background-size: cover;
+  }
+
+  .malmo {
+    background:  linear-gradient(
+      rgba(72 ,0 ,106, 0.6), 
+      rgba(72 ,0 ,106, 0.6)
+    ), url("http://www.shl.dk/wp-content/uploads/2016/03/SHL_Architects_Malm%C3%B6-Live_Malm%C3%B6-from-above_banner_image-1170x555.jpg");
+    background-size: cover;
+  }
 }
 
 @media screen and (min-width: 501px) and (max-width: 1000px) {
