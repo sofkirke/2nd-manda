@@ -84,36 +84,48 @@ footer {
 
 @media screen and (min-width: 501px) and (max-width: 1000px) {
 
-  .flex-nav ul {
+  .flex-nav {
+    padding: 0 20px;
+
+    ul li {
+      flex-basis: 100%;
+      font-size: 0.8em;
+      margin-left: 5px;
+    }
   }
-
-  .flex-nav ul li {
-    flex-basis: 100%;
-    font-size: 0.8em;
-    margin-left: 5px;
-  }
-
-
 
 }
 
 @media screen and (max-width: 500px) {
   
-  .flex-nav ul {
-    flex-wrap: wrap;
-    display: none;
-  }
+  .flex-nav {
+    padding: 0 10px;
 
-  .flex-nav ul li {
-    flex-basis: 100%;
-  }
+    ul {
+      display: none;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 50px;
+      flex-basis: 60%;
+      background-color: #48006A;
+    }
 
+    ul li {
+      flex-basis: 100%;
+      margin: 8px 5px;
+    }
 
-  .toggleNav {
-  display: block;
-  }
+    ul.open {
+      display: flex;
+    }
 
-  .flex-nav ul.open {
-    display: flex;
+    .nav-right {
+      flex-basis: 60%;
+    }
+
+    .toggleNav {
+      display: block;
+      text-align: right;
+    }
   }
 }

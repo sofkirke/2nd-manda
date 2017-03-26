@@ -195,22 +195,31 @@ footer {
   margin-top: 20px; }
 
 @media screen and (min-width: 501px) and (max-width: 1000px) {
-  .flex-nav ul li {
-    flex-basis: 100%;
-    font-size: 0.8em;
-    margin-left: 5px; } }
+  .flex-nav {
+    padding: 0 20px; }
+    .flex-nav ul li {
+      flex-basis: 100%;
+      font-size: 0.8em;
+      margin-left: 5px; } }
 @media screen and (max-width: 500px) {
-  .flex-nav ul {
-    flex-wrap: wrap;
-    display: none; }
-
-  .flex-nav ul li {
-    flex-basis: 100%; }
-
-  .toggleNav {
-    display: block; }
-
-  .flex-nav ul.open {
-    display: flex; } }
+  .flex-nav {
+    padding: 0 10px; }
+    .flex-nav ul {
+      display: none;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 50px;
+      flex-basis: 60%;
+      background-color: #48006A; }
+    .flex-nav ul li {
+      flex-basis: 100%;
+      margin: 8px 5px; }
+    .flex-nav ul.open {
+      display: flex; }
+    .flex-nav .nav-right {
+      flex-basis: 60%; }
+    .flex-nav .toggleNav {
+      display: block;
+      text-align: right; } }
 
 /*# sourceMappingURL=style.css.map */
