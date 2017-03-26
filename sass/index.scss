@@ -210,17 +210,20 @@
     input[type="search"] {
       flex-basis: 100%;
       font-size: 0.8em;
+      margin: 2px 0;
     }
 
     label {
       flex-basis: 20%;
       font-size: 0.8em;
+      margin: 2px 0;
 
     }
 
     input[type="date"] {
       flex-basis: 80%;
       font-size: 0.8em;
+      margin: 2px 0;
     }
 
     input[type="number"] {
@@ -230,6 +233,7 @@
 
     input[type="submit"] {
       flex-basis: 100%;
+      margin: 2px 0;
     }
   }
 
@@ -239,6 +243,20 @@
     input {
       margin-left: 10px;
     }
+  }
+
+  /*********          SUGGESTED TRAVELS            *********/
+
+
+  .sugg-travels {
+    flex-direction: column;
+  }
+
+
+  /*********          SUGGESTED TRAVELS BASED ON CALENDAR            *********/
+
+  .calendar-sugg {
+    flex-direction: column;
   }
 
 }

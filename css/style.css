@@ -129,21 +129,33 @@
     flex-wrap: wrap; }
     .flex-form input[type="search"] {
       flex-basis: 100%;
-      font-size: 0.8em; }
+      font-size: 0.8em;
+      margin: 2px 0; }
     .flex-form label {
       flex-basis: 20%;
-      font-size: 0.8em; }
+      font-size: 0.8em;
+      margin: 2px 0; }
     .flex-form input[type="date"] {
       flex-basis: 80%;
-      font-size: 0.8em; }
+      font-size: 0.8em;
+      margin: 2px 0; }
     .flex-form input[type="number"] {
       flex-basis: 80%;
       font-size: 0.8em; }
     .flex-form input[type="submit"] {
-      flex-basis: 100%; }
+      flex-basis: 100%;
+      margin: 2px 0; }
 
   .flex-checks input {
-    margin-left: 10px; } }
+    margin-left: 10px; }
+
+  /*********          SUGGESTED TRAVELS            *********/
+  .sugg-travels {
+    flex-direction: column; }
+
+  /*********          SUGGESTED TRAVELS BASED ON CALENDAR            *********/
+  .calendar-sugg {
+    flex-direction: column; } }
 /*  M├àSKE EN MEDIA SCREEN VED 720 - 500 ?? */
 * {
   -webkit-box-sizing: border-box;
