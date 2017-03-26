@@ -87,7 +87,7 @@
     background: linear-gradient(rgba(72, 0, 106, 0.8), rgba(72, 0, 106, 0.8)), url("http://www.shl.dk/wp-content/uploads/2016/03/SHL_Architects_Malm%C3%B6-Live_Malm%C3%B6-from-above_banner_image-1170x555.jpg");
     background-size: cover; }
 
-@media screen and (min-width: 501px) and (max-width: 1000px) {
+@media screen and (min-width: 721px) and (max-width: 1000px) {
   .cover-index {
     height: 60vh; }
 
@@ -111,6 +111,35 @@
       font-size: 0.8em; }
     .flex-form input[type="number"] {
       flex-basis: 40%;
+      font-size: 0.8em; }
+    .flex-form input[type="submit"] {
+      flex-basis: 100%;
+      font-size: 0.8em;
+      margin: 2px 0; } }
+@media screen and (min-width: 501px) and (max-width: 720px) {
+  .cover-index {
+    height: 60vh; }
+
+  .search-bar {
+    flex-basis: 85%; }
+
+  .flex-form {
+    display: flex;
+    flex-wrap: wrap; }
+    .flex-form input[type="search"] {
+      flex-basis: 50%;
+      margin: 2px 0;
+      font-size: 0.8em; }
+    .flex-form label {
+      flex-basis: 20%;
+      margin: 2px 0;
+      font-size: 0.6em; }
+    .flex-form input[type="date"] {
+      flex-basis: 80%;
+      margin: 2px 0;
+      font-size: 0.8em; }
+    .flex-form input[type="number"] {
+      flex-basis: 80%;
       font-size: 0.8em; }
     .flex-form input[type="submit"] {
       flex-basis: 100%;
