@@ -142,36 +142,52 @@
 
 @media screen and (min-width: 501px) and (max-width: 1000px) {
 
-  
+  .cover-index  {
+    height:60vh;
+  }
+
+  .search-bar {
+    flex-basis: 75%;
+  }
+
   .flex-form{
 
     display: flex;
-    flex-basis: 60%;
     flex-wrap: wrap;
 
 
+
     input[type="search"] {
-      flex-basis: 100%;
+      flex-basis: 50%;
+      margin: 2px 0;
+      font-size: 0.8em;
     }
 
     label {
-      flex-basis: 40%;
+      flex-basis: 10%;
+      margin: 2px 0;
+      font-size: 0.6em;
     }
 
     input[type="date"] {
-      flex-basis: 60%;
+      flex-basis: 40%;
+      margin: 2px 0;
+      font-size: 0.8em;
     }
 
     input[type="number"] {
-      flex-basis: 60%;
+      flex-basis: 40%;
+      font-size: 0.8em;
+
     }
 
     input[type="submit"] {
       flex-basis: 100%;
+      font-size: 0.8em;
+      margin: 2px 0;
     }
 
   }
-
 }
 
 @media screen and (max-width: 500px) {
@@ -190,6 +206,7 @@
 
     label {
       flex-basis: 40%;
+
     }
 
     input[type="date"] {
@@ -205,3 +222,5 @@
     }
   }
 }
+
+/*  MÅSKE EN MEDIA SCREEN VED 720 - 500 ?? */
