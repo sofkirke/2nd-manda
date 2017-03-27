@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin borderRadius($radius){
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -10,4 +12,51 @@
 	-moz-box-sizing: $type;
 	-ms-box-sizing: $type;
 	box-sizing: $type;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexRowAliCen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flexRowSpaAro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@mixin flexRowCen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin flexColMar2 {
+  margin: $margin2per;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRowMar2 {
+  margin: $margin2per;
+  @include flexRow;
+}
+
+@mixin flexColSpaAroAliCenMar2  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: $margin2per;
+}
+
+@mixin flexRowMar2 {
+  margin: $margin2per;
+  @include flexRow;
 }

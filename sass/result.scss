@@ -1,0 +1,211 @@
+@import "mixins";
+@import "variables";
+
+body{
+
+  .resultWrapper{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F7;
+
+    .searchContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 5% 0 2% 0;
+
+      .airportAndDateWrapper{
+        width: 100%;
+        height: 10%;
+        @include flexRowCen;
+
+        div{
+          padding: 1%;
+        }
+
+        .departureContainer, .arrivalContainer{
+          input{
+            padding: 10% 10%;
+            border-radius: 4px;
+          }
+        }
+
+        .toDateContainer, .fromDateContainer{
+          input{
+            padding: 10% 10%;
+            border-radius: 4px;
+          }
+        }
+
+        .searchButtonContainer{
+          input{
+            padding: 18px 40px;
+            background:#ccc;
+            border:0 none;
+            cursor:pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .tickWrapper{
+        width: 65%;
+        height: 10%;
+        @include flexRowCen;
+
+        div{
+          padding-left: 2%;
+        }
+      }
+    }
+
+    .classContainer{
+      width: 100%;
+      height: 20%;
+      @include flexRowCen;
+
+      .classes{
+        width: 50%;
+        @include flexRowSpaAro;
+
+        .economyClass, .businessClass, .firstClass{
+          margin: $margin2per;
+        }
+      }
+    }
+
+    .resultContainer{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .resultsWrapper{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .travelWrapper{
+          display: flex;
+          justify-content: center;
+
+          .travelContainer{
+          width: 60%;
+          height: 20%;
+          margin: 1% 5% 0 5%;
+          padding-top: 1%;
+          border: 1px grey solid;
+          @include flexRowSpaAro;
+          background-color: white;
+
+          .destinationsContainer{
+            width: 80%;
+            margin-left: 4%;
+
+            .toDesitinationContainer{
+              width: 95%;
+              height: 90%;
+              margin: 2% 0 0 0;
+              display: flex;
+              flex-direction: column;
+
+              .destinationContainer, .arrivalContainer{
+                width: 90%;
+                height: 50%;
+                @include flexRowMar2;
+              }
+
+              .destinationContainer{
+                border: 1px grey;
+                border-style: none none solid none;
+                padding-bottom: 5%;
+
+              }
+
+              .dividerContainer{
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .divider{
+                  width: 50%;
+                  border: 1px grey;
+                  border-style: none none solid none;
+                }
+              }
+
+              .destinationCapitalAndTimeContainer, .arrivalCapitalAndTimeContainer{
+                width: 70%;
+                height: 90%;
+                @include flexColSpaAroAliCenMar2;
+              }
+
+              .toCapitalContainer, .toTimeContainer, .fromCapitalContainer, .fromTimeContainer{
+                width: 100%;
+                height: 70%;
+                @include flexColSpaAroAliCenMar2;
+              }
+
+              .companyContainer{
+                width: 60%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: $margin2per;
+
+                h1, h2, h3, h4, h5{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0;
+                  padding: 0;
+                }
+
+                img{
+                  width: 100px;
+                }
+              }
+            }
+          }
+
+          .priceAndSelectTravelContainer{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5% 8% 0 2%;
+
+            .priceContainer, .selectTravelContainer{
+              width: 150px;
+              height: 100px;
+              @include flexColSpaAroAliCenMar2;
+
+              input{
+                padding:15px 25px;
+                background:#ccc;
+                border:0 none;
+                cursor:pointer;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "colors.scss";
+
+body{
+
+
+	#payment{
+		border: 2px solid $black;
+	    display: flex;
+	    width: 60%;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;	
+	}
+
+	#pm-price-lower{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#pm-addons-content{
+		display: flex;
+		justify-content: flex-start;
+
+		#pm-addons-content-right{
+			display: flex;
+			flex-flow: column;
+			justify-content: space-around;
+		}
+	}
+
+	#pm-price-title{
+		display: flex;
+		justify-content: flex-start;
+	    align-items: baseline;
+	}
+
+	@media screen and (min-width: 1000px) {
+
+		#payment{
+			margin: 1rem;
+			div{
+				border: 0.6px solid green;
+			}
+			#pm-upper-wrapper{
+				display:flex;
+				justify-content: center;
+				align-items: stretch;
+
+				#pm-info-wrapper{
+					display: flex;
+					flex-basis: 25%;
+					flex-direction: column;
+				}
+				#pm-travel-wrapper{
+					display: flex;
+					flex-basis: 15%;
+					flex-direction: column;
+				}
+				#pm-order-wrapper{
+					display: flex;
+					flex-basis: 20%;
+					flex-direction: column;
+				}
+			}
+			#pm-lower-wrapper{
+				display:flex;
+				justify-content: center;
+				#pm-addons{
+					flex-basis: 30%;
+				}
+				#pm-price{
+					flex-basis: 30%;
+				
+				}
+
+			}
+		}
+
+	}
+
+}
