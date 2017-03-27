@@ -1,4 +1,4 @@
-
+@import "colors.scss";
 /*********          SEARCH BAR            *********/
 
 .cover-index  {
@@ -24,29 +24,29 @@
   flex-basis: 40%;
 
   *:not(input[type="date"]){
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
     flex-wrap: wrap;
     flex-basis: 75%;
   }
 
 
   input[type="submit"] {
-    background: #cc8d3b;
-    border-top: 1px solid #cc8d3b;
-    border-bottom: 1px solid #cc8d3b;
-    color: #fff;
+    background: $orange;
+    border-top: 1px solid $formBorder;
+    border-bottom: 1px solid $formBorder;
+    color: $white;
     flex-basis: 10%;
   }
 
   * {
     border: 0;
     padding: 10px;
-    background: #fff;
+    background: $white;
     line-height: 32px;
     font-size: 16px;
     outline: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba($black, 0.2);
     -webkit-appearance: none;
   }
 
@@ -76,31 +76,30 @@
 
   .sugg {
     flex-basis: 100%;
-    background-color: red;
     margin: 10px;
     height: 20vh;
   }
 
   .london {
     background:  linear-gradient(
-      rgba(245, 130, 32, 0.6), 
-      rgba(245, 130, 32, 0.6)
+      rgba($orange, 0.6), 
+      rgba($orange, 0.6)
     ), url("https://media.timeout.com/images/100644443/image.jpg");
     background-size: cover;
   }
 
   .newYork {
     background:  linear-gradient(
-      rgba(245, 130, 32, 0.6), 
-      rgba(245, 130, 32, 0.6)
+      rgba($orange, 0.6), 
+      rgba($orange, 0.6)
     ), url("https://www.gentlegiant.com/wp-content/uploads/2015/06/New-York.jpg");
     background-size: cover;
   }
 
   .tokyo {
     background:  linear-gradient(
-      rgba(245, 130, 32, 0.6), 
-      rgba(245, 130, 32, 0.6)
+      rgba($orange, 0.6), 
+      rgba($orange, 0.6)
     ), url("http://geography.name/wp-content/uploads/2016/02/tokyo.jpg");
     background-size: cover;
   } 
@@ -117,7 +116,6 @@
 
   .cale {
     flex-basis: 100%;
-    background-color: red;
     margin: 10px;
     height: 100%;
     color: white;
@@ -125,16 +123,16 @@
 
   .paris {
     background:  linear-gradient(
-      rgba(72 ,0 ,106, 0.8), 
-      rgba(72 ,0 ,106, 0.8)
+      rgba($purple, 0.8), 
+      rgba($purple, 0.8)
     ), url("https://www.datasciencetech.institute/wp-content/uploads/2014/12/Eiffel-Tower-Paris-France.jpg");
     background-size: cover;
   }
 
   .malmo {
     background:  linear-gradient(
-      rgba(72 ,0 ,106, 0.8), 
-      rgba(72 ,0 ,106, 0.8)
+      rgba($purple, 0.8), 
+      rgba($purple, 0.8)
     ), url("http://www.shl.dk/wp-content/uploads/2016/03/SHL_Architects_Malm%C3%B6-Live_Malm%C3%B6-from-above_banner_image-1170x555.jpg");
     background-size: cover;
   }
@@ -154,8 +152,6 @@
 
     display: flex;
     flex-wrap: wrap;
-
-
 
     input[type="search"] {
       flex-basis: 50%;
@@ -301,7 +297,6 @@
   .sugg-travels {
     flex-direction: column;
   }
-
 
   /*********          SUGGESTED TRAVELS BASED ON CALENDAR            *********/
 
