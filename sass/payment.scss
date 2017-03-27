@@ -2,14 +2,121 @@
 
 body{
 
+	.payment-container {
+
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(
+	      rgba($white, 0.7), 
+	      rgba($white, 0.7)
+	    ), url("https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/17571255_10211849789497585_1870481032_o.png?oh=4ee2bed841639f3bf963f8e633a9c3ca&oe=58DB6283");
+		background-size: cover;
+
+	}
 
 	#payment{
-		border: 2px solid $black;
+		padding: 30px;
+		border: 2px solid $lightGrey;
+		border-radius: 10px;
+		background-color: $white;
 	    display: flex;
-	    width: 60%;
-	    flex-direction: column;
-	    justify-content: center;
-	    align-items: center;	
+	    flex-basis: 50%;
+	    flex-direction: row;
+	    margin: 10px 0;
+
+	    	div{
+				margin: 0 8px;
+			}
+
+	    	.pm-upper-wrapper {
+	    		display: flex;
+	    		flex-direction: row;
+	    	}
+
+	    	#pm-left-wrapper{
+				display:flex;
+				flex-basis: 70%;
+				flex-direction: column;
+				justify-content: center;
+
+				#pm-info-wrapper{
+					display: flex;
+					flex-basis: 60%;
+					flex-direction: column;
+				}
+				#pm-payment-wrapper{
+					display: flex;
+					flex-basis: 40%;
+					flex-direction: column;
+				}
+
+				.pm-lower-wrapper {
+					background-color: $darkGrey;
+				}
+
+				#pm-addons{
+					flex-basis: 100%;
+				}
+				
+			}
+			#pm-right-wrapper{
+				display:flex;
+				flex-basis: 30%;
+				background-color: $lightOrange;
+				flex-direction: column;
+				justify-content: center;
+
+				#pm-order-wrapper{
+					display: flex;
+					flex-basis: 100%;
+					flex-direction: column;
+				}
+
+				
+				#pm-price{
+					margin-top: 10px;
+					flex-basis: 100%;
+				
+					.final-price {
+						margin-left: 5px;
+					}
+				}
+
+				#pm-price-btns {
+
+					display: flex;
+					flex-basis: 100%;
+					justify-content: space-between;
+					margin-bottom: 5px;
+
+					a {
+						text-decoration: none;
+					}
+
+
+					.btn-succes {
+						background-color: $btnGreen;
+						flex-basis: 60%;
+						height: 50px;
+
+						a {
+							color: $white;
+						}
+					}
+
+					.btn-cancel {
+						flex-basis: 30%;
+
+						a{
+							color: $black;
+						}
+					}
+				}
+
+			}
 	}
 
 	#pm-price-lower{
@@ -19,7 +126,6 @@ body{
 
 	#pm-addons-content{
 		display: flex;
-		justify-content: flex-start;
 
 		#pm-addons-content-right{
 			display: flex;
@@ -34,48 +140,165 @@ body{
 	    align-items: baseline;
 	}
 
-	@media screen and (min-width: 1000px) {
+}
+
+
+@media screen and (min-width: 999px) and (max-width: 1400px) { 
+
+
+	body{
+
+		.payment-container {
+			background: linear-gradient(
+		      rgba($white, 0.7), 
+		      rgba($white, 0.7)
+		    ), url("https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/17572043_10211849933861194_647924336_o.png?oh=cd21cfab2e8833b13611ae6eadb155f3&oe=58DB32FD");
+			background-size: cover;
+
+		}
 
 		#payment{
-			margin: 1rem;
-			div{
-				border: 0.6px solid green;
-			}
-			#pm-upper-wrapper{
-				display:flex;
-				justify-content: center;
-				align-items: stretch;
+			font-size: 0.9em;
+		    flex-basis: 70%;
+		}
+
+	}
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 1000px) { 
+
+
+	body{
+
+		.payment-container {
+			background: linear-gradient(
+		      rgba($white, 0.7), 
+		      rgba($white, 0.7)
+		    ), url("https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/17572043_10211849933861194_647924336_o.png?oh=cd21cfab2e8833b13611ae6eadb155f3&oe=58DB32FD");
+			background-size: cover;
+		}
+
+		#payment{
+			font-size: 0.8em;
+		    flex-basis: 80%;
+		}
+	}
+}
+
+@media screen and (min-width: 501px) and (max-width: 720px) { 
+
+	body{
+		.payment-container {
+			background: linear-gradient(
+		      rgba($white, 0.7), 
+		      rgba($white, 0.7)
+		    ), url("https://scontent-fra3-1.xx.fbcdn.net/v/t34.0-12/17580057_10211849958781817_2030937439_n.png?oh=48923544cedfc2e23c92dc23fc2f1cff&oe=58DB0BB8");
+			background-size: cover;
+		}
+
+		#payment{
+			padding: 10px;
+			font-size: 0.7em;
+		    flex-basis: 90%;
+		}
+	}
+
+}
+
+@media screen and (max-width: 500px) { 
+
+	body{
+		.payment-container {
+			background: linear-gradient(
+		      rgba($white, 0.7), 
+		      rgba($white, 0.7)
+		    ), url("https://scontent-fra3-1.xx.fbcdn.net/v/t34.0-12/17578038_10211849993982697_1864148707_n.png?oh=22d058e422dd6587387e591f560a7701&oe=58DB56DE");
+			background-size: cover;
+		}
+
+		#payment{
+			padding: 5px;
+			font-size: 0.7em;
+		    flex-basis: 90%;
+		    flex-direction: column;
+		    margin-top: 150px;
+
+		    .pm-upper-wrapper {
+	    		flex-direction: column;
+	    	}
+
+	    	#pm-left-wrapper{
+				flex-basis: 100%;
 
 				#pm-info-wrapper{
-					display: flex;
-					flex-basis: 25%;
-					flex-direction: column;
+					flex-basis: 100%;
 				}
-				#pm-travel-wrapper{
-					display: flex;
-					flex-basis: 15%;
-					flex-direction: column;
+				#pm-payment-wrapper{
+					flex-basis: 100%;
 				}
-				#pm-order-wrapper{
-					display: flex;
-					flex-basis: 20%;
-					flex-direction: column;
+
+				.pm-lower-wrapper {
+					background-color: $darkGrey;
+					flex-basis: 100%
 				}
-			}
-			#pm-lower-wrapper{
-				display:flex;
-				justify-content: center;
+
 				#pm-addons{
-					flex-basis: 30%;
+					flex-basis: 100%;
 				}
-				#pm-price{
-					flex-basis: 30%;
 				
+			}
+
+			#pm-right-wrapper{
+				flex-basis: 100%;
+
+				#pm-order-wrapper{
+					flex-basis: 100%;
+				}
+
+				
+				#pm-price{
+					margin-top: 10px;
+					flex-basis: 100%;
+				
+					.final-price {
+						margin-left: 5px;
+					}
+				}
+
+				#pm-price-btns {
+
+					display: flex;
+					flex-basis: 100%;
+					justify-content: space-between;
+					margin-bottom: 5px;
+
+					a {
+						text-decoration: none;
+					}
+
+
+					.btn-succes {
+						background-color: $btnGreen;
+						flex-basis: 60%;
+						height: 50px;
+
+						a {
+							color: $white;
+						}
+					}
+
+					.btn-cancel {
+						flex-basis: 30%;
+
+						a{
+							color: $black;
+						}
+					}
 				}
 
 			}
 		}
-
 	}
 
 }
