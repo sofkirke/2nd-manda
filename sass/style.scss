@@ -2,6 +2,7 @@
 @import "index.scss";
 @import "result.scss";
 @import "payment.scss";
+@import "colors.scss";
 
 * {
   @include boxSizing(border-box);
@@ -21,7 +22,7 @@ body {
 }
 
 .flex-nav{
-  background-color: #48006A;
+  background-color: $purple;
   height: 55px;
   display: flex;
   padding: 0 30px;
@@ -101,7 +102,7 @@ footer {
     padding: 0 10px;
 
     ul {
-      display: none;
+      display: none; 
       flex-wrap: wrap;
       position: absolute;
       text-align: right;
