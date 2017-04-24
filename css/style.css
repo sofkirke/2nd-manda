@@ -189,49 +189,16 @@ body .resultWrapper {
   display: flex;
   flex-direction: column;
   background-color: #F7F7F7; }
-  body .resultWrapper .searchContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 5% 0 2% 0; }
-    body .resultWrapper .searchContainer .airportAndDateWrapper {
-      width: 100%;
-      height: 10%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
-      body .resultWrapper .searchContainer .airportAndDateWrapper div {
-        padding: 1%; }
-      body .resultWrapper .searchContainer .airportAndDateWrapper .departureContainer input, body .resultWrapper .searchContainer .airportAndDateWrapper .arrivalContainer input {
-        padding: 10% 10%;
-        border-radius: 4px; }
-      body .resultWrapper .searchContainer .airportAndDateWrapper .toDateContainer input, body .resultWrapper .searchContainer .airportAndDateWrapper .fromDateContainer input {
-        padding: 10% 10%;
-        border-radius: 4px; }
-      body .resultWrapper .searchContainer .airportAndDateWrapper .searchButtonContainer input {
-        padding: 18px 40px;
-        background: #ccc;
-        border: 0 none;
-        cursor: pointer;
-        -webkit-border-radius: 5px;
-        border-radius: 5px; }
-    body .resultWrapper .searchContainer .tickWrapper {
-      width: 65%;
-      height: 10%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
-      body .resultWrapper .searchContainer .tickWrapper div {
-        padding-left: 2%; }
   body .resultWrapper .classContainer {
     width: 100%;
     height: 20%;
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 1%; }
     body .resultWrapper .classContainer .classes {
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
@@ -253,14 +220,11 @@ body .resultWrapper {
         display: flex;
         justify-content: center; }
         body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer {
-          width: 60%;
           height: 20%;
           margin: 1% 5% 0 5%;
           padding-top: 1%;
           border: 1px grey solid;
           display: flex;
-          flex-direction: row;
-          justify-content: space-around;
           background-color: white; }
           body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer {
             width: 80%;
@@ -322,32 +286,60 @@ body .resultWrapper {
                   padding: 0; }
                 body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer .toDesitinationContainer .companyContainer img {
                   width: 100px; }
-          body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer {
-            width: 30%;
+          body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .priceContainer, body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer {
+            width: 150px;
+            height: 100px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            align-items: center;
-            margin: 5% 8% 0 2%; }
-            body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .priceContainer, body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer {
-              width: 150px;
-              height: 100px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-around;
-              align-items: center;
-              margin: 2%; }
-              body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .priceContainer button, body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer button {
-                padding: 15px 25px;
-                background: #ccc;
-                border: 0 none;
-                cursor: pointer;
-                -webkit-border-radius: 5px;
-                border-radius: 5px; }
-                body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .priceContainer button a, body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer button a {
-                  text-decoration: none;
-                  color: #000; }
+            align-items: center; }
+            body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .priceContainer button, body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer button {
+              padding: 15px 25px;
+              background: #ccc;
+              border: 0 none;
+              cursor: pointer;
+              -webkit-border-radius: 5px;
+              border-radius: 5px; }
+              body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .priceContainer button a, body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer button a {
+                text-decoration: none;
+                color: #000; }
 
+@media screen and (min-width: 1025px) {
+  body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer {
+    width: 60%;
+    flex-direction: row; }
+    body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer {
+      width: 80%;
+      margin-left: 4%; }
+    body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 5% 8% 0 2%; }
+      body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer {
+        margin: 2%; } }
+@media screen and (max-width: 1024px) {
+  body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer {
+    width: 90%;
+    flex-direction: column; }
+    body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+    body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFAB91;
+      padding: 5%; }
+      body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .priceContainer {
+        margin-top: 5%; }
+      body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .priceAndSelectTravelContainer .selectTravelContainer {
+        margin: 5% 2% 0 2%; } }
 body .payment-container {
   width: 100%;
   height: 100vh;
