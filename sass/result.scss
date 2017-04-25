@@ -80,15 +80,20 @@ body{
                 }
 
                 .dividerContainer{
-                  width: 25%;
+                  width: 38%;
                   display: flex;
                   justify-content: center;
                   align-items: center;
 
                   .divider{
-                    width: 50%;
+                    width: 100%;
+                    margin-top: 20%;
                     border: 1px grey;
                     border-style: none none solid none;
+
+                    h5 {
+                    text-align: center;
+                    }
                   }
                 }
 

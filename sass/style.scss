@@ -23,13 +23,13 @@ body {
 }
 
 .flex-nav{
-  background-color: $purple;
+  background-color: $menuColor;
   height: 55px;
   display: flex;
   padding: 0 30px;
   align-items: center;
   flex-direction: row;
-  color: $orange;
+  color: $white;
   justify-content: space-between;
   
   /* Flex Container */
@@ -65,7 +65,7 @@ body {
   }
 
   a {
-    color: $orange;
+    color: $white;
     text-decoration: none;
   }
 }
@@ -78,7 +78,7 @@ footer {
    display: flex;
    align-items: center;
    justify-content: center;
-   background: $purple;
+   background: $menuColor;
    color: white;
    margin-top: 20px;
 }
@@ -108,7 +108,7 @@ footer {
       position: absolute;
       text-align: right;
       top: 50px;
-      background-color: $purple;
+      background-color: $menuColor;
     }
 
     ul li {
@@ -142,7 +142,7 @@ footer {
       position: absolute;
       top: 50px;
       flex-basis: 60%;
-      background-color: $purple;
+      background-color: $menuColor;
     }
 
     ul li {
