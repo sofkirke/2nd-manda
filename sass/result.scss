@@ -4,6 +4,7 @@
 
 body{
 
+
   .resultWrapper{
     width: 100%;
     height: 100%;
@@ -53,7 +54,7 @@ body{
             padding-top: 1%;
             border: 1px grey solid;
             display: flex;
-            background-color: white;
+            background-color: $white;
 
             .destinationsContainer{
               width: 80%;
@@ -165,6 +166,7 @@ body{
     }
   }
 }
+
 
 @media screen and (min-width: 1025px) {
   body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer{

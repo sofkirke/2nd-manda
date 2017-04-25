@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2015/11/London-%C2%A9-QQ7-Shutterstock-e1455618305877.jpg");
+  background-image: url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18159367_10212154670799427_1491287755_o.png?oh=b8541753f181cae0f56adee19fd1343e&oe=5901B9A8");
   background-size: cover;
 }
 
@@ -24,6 +24,10 @@
   display: flex;
   flex-basis: 40%;
 
+  input, label {
+  background-color: $white;
+  }
+
   *:not(input[type="date"]){
     border-top: 1px solid $white;
     border-bottom: 1px solid $white;
@@ -33,9 +37,9 @@
 
 
   input[type="submit"] {
-    background: $orange;
-    border-top: 1px solid $formBorder;
-    border-bottom: 1px solid $formBorder;
+    background: $menuColor;
+    border-top: 1px solid $menuColor;
+    border-bottom: 1px solid $menuColor;
     color: $white;
     flex-basis: 10%;
   }
@@ -70,10 +74,24 @@
 /*********          SUGGESTED TRAVELS            *********/
 .suggested-travels {
   text-align: center;
+
+  h3{
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+  h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    padding: 25px;
+
+  }
+
 }
 
 .sugg-travels {
   display: flex;
+  font-family: 'Roboto', sans-serif;
+
+  
 
   .sugg {
     flex-basis: 100%;
@@ -83,25 +101,25 @@
 
   .london {
     background:  linear-gradient(
-      rgba($orange, 0.6), 
-      rgba($orange, 0.6)
-    ), url("https://media.timeout.com/images/100644443/image.jpg");
+      rgba($orange, 0.2), 
+      rgba($orange, 0.2)
+    ), url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18175314_10212154812402967_672162396_o.png?oh=3b3f2b7e361104c6e393b1cf1e09ac8e&oe=5901732D");
     background-size: cover;
   }
 
   .newYork {
     background:  linear-gradient(
-      rgba($orange, 0.6), 
-      rgba($orange, 0.6)
-    ), url("https://www.gentlegiant.com/wp-content/uploads/2015/06/New-York.jpg");
+      rgba($orange, 0.2), 
+      rgba($orange, 0.2)
+    ), url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18119777_10212154763401742_1526819122_o.png?oh=7cc8fdc2b6d9e60228e8c6d923cbe6a2&oe=5901CAB0");
     background-size: cover;
   }
 
   .tokyo {
     background:  linear-gradient(
-      rgba($orange, 0.6), 
-      rgba($orange, 0.6)
-    ), url("http://geography.name/wp-content/uploads/2016/02/tokyo.jpg");
+      rgba($orange, 0.2), 
+      rgba($orange, 0.2)
+    ), url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18109993_10212154799602647_612392192_o.png?oh=0298fd68752a1684126fa2ecd4a8e024&oe=5901CFB7");
     background-size: cover;
   } 
 }
@@ -114,6 +132,11 @@
 
 .calendar-sugg {
   display: flex;
+  font-family: 'Roboto', sans-serif;
+
+  h3 {
+    font-family: 'Julius Sans One', sans-serif;
+  }
 
   .cale {
     flex-basis: 100%;

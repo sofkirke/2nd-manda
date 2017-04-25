@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2015/11/London-%C2%A9-QQ7-Shutterstock-e1455618305877.jpg");
+  background-image: url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18159367_10212154670799427_1491287755_o.png?oh=b8541753f181cae0f56adee19fd1343e&oe=5901B9A8");
   background-size: cover; }
 
 .search-bar {
@@ -16,15 +16,17 @@
 .flex-form {
   display: flex;
   flex-basis: 40%; }
+  .flex-form input, .flex-form label {
+    background-color: #FDFDFD; }
   .flex-form *:not(input[type="date"]) {
     border-top: 1px solid #FDFDFD;
     border-bottom: 1px solid #FDFDFD;
     flex-wrap: wrap;
     flex-basis: 75%; }
   .flex-form input[type="submit"] {
-    background: #07575B;
-    border-top: 1px solid #cc8d3b;
-    border-bottom: 1px solid #cc8d3b;
+    background: #003B46;
+    border-top: 1px solid #003B46;
+    border-bottom: 1px solid #003B46;
     color: #FDFDFD;
     flex-basis: 10%; }
   .flex-form * {
@@ -50,21 +52,27 @@
 /*********          SUGGESTED TRAVELS            *********/
 .suggested-travels {
   text-align: center; }
+  .suggested-travels h3 {
+    font-family: 'Julius Sans One', sans-serif; }
+  .suggested-travels h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    padding: 25px; }
 
 .sugg-travels {
-  display: flex; }
+  display: flex;
+  font-family: 'Roboto', sans-serif; }
   .sugg-travels .sugg {
     flex-basis: 100%;
     margin: 10px;
     height: 20vh; }
   .sugg-travels .london {
-    background: linear-gradient(rgba(7, 87, 91, 0.6), rgba(7, 87, 91, 0.6)), url("https://media.timeout.com/images/100644443/image.jpg");
+    background: linear-gradient(rgba(7, 87, 91, 0.2), rgba(7, 87, 91, 0.2)), url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18175314_10212154812402967_672162396_o.png?oh=3b3f2b7e361104c6e393b1cf1e09ac8e&oe=5901732D");
     background-size: cover; }
   .sugg-travels .newYork {
-    background: linear-gradient(rgba(7, 87, 91, 0.6), rgba(7, 87, 91, 0.6)), url("https://www.gentlegiant.com/wp-content/uploads/2015/06/New-York.jpg");
+    background: linear-gradient(rgba(7, 87, 91, 0.2), rgba(7, 87, 91, 0.2)), url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18119777_10212154763401742_1526819122_o.png?oh=7cc8fdc2b6d9e60228e8c6d923cbe6a2&oe=5901CAB0");
     background-size: cover; }
   .sugg-travels .tokyo {
-    background: linear-gradient(rgba(7, 87, 91, 0.6), rgba(7, 87, 91, 0.6)), url("http://geography.name/wp-content/uploads/2016/02/tokyo.jpg");
+    background: linear-gradient(rgba(7, 87, 91, 0.2), rgba(7, 87, 91, 0.2)), url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18109993_10212154799602647_612392192_o.png?oh=0298fd68752a1684126fa2ecd4a8e024&oe=5901CFB7");
     background-size: cover; }
 
 /*********          SUGGESTED TRAVELS BASED ON CALENDAR            *********/
@@ -72,7 +80,10 @@
   text-align: center; }
 
 .calendar-sugg {
-  display: flex; }
+  display: flex;
+  font-family: 'Roboto', sans-serif; }
+  .calendar-sugg h3 {
+    font-family: 'Julius Sans One', sans-serif; }
   .calendar-sugg .cale {
     flex-basis: 100%;
     margin: 10px;
@@ -225,7 +236,7 @@ body .resultWrapper {
           padding-top: 1%;
           border: 1px grey solid;
           display: flex;
-          background-color: white; }
+          background-color: #FDFDFD; }
           body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer {
             width: 80%;
             margin-left: 4%; }
@@ -506,7 +517,7 @@ body #pm-price-title {
   box-sizing: border-box; }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   border: 0;
   margin: 0;
   font-size: 16px;
@@ -518,6 +529,7 @@ body {
 
 .flex-nav {
   background-color: #003B46;
+  font-family: 'Julius Sans One', sans-serif;
   height: 55px;
   display: flex;
   padding: 0 30px;
@@ -550,8 +562,9 @@ body {
     text-decoration: none; }
 
 footer {
+  font-family: 'Julius Sans One', sans-serif;
   left: 0px;
-  bottom: 0px;
+  bottom: 0;
   height: 45px;
   width: 100%;
   display: flex;

@@ -9,8 +9,9 @@
   @include boxSizing(border-box);
 }
 
+
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   border: 0;
   margin: 0; 
   font-size: 16px;
@@ -24,6 +25,7 @@ body {
 
 .flex-nav{
   background-color: $menuColor;
+  font-family: 'Julius Sans One', sans-serif;
   height: 55px;
   display: flex;
   padding: 0 30px;
@@ -53,8 +55,6 @@ body {
 
     div {
       margin-left: 20px;
-
-
     }
   }
 
@@ -71,8 +71,9 @@ body {
 }
 
 footer {  
+  font-family: 'Julius Sans One', sans-serif;
    left:0px;
-   bottom:0px;
+   bottom:0;
    height:45px;
    width:100%;
    display: flex;
