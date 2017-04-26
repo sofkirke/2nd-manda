@@ -15,6 +15,7 @@
       
       <div class="nav-left">
         <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <a href="index.html"> <h3>BusinessBook</h3></a>
       </div>
 
 
@@ -39,21 +40,21 @@
 
     <div class="search-bar">
 
-      <form  class="flex-form" action="result.html">
-        <input type="search" placeholder="Departure">
-        <input type="search" placeholder="Destination">
+      <div  class="flex-form">
+        <input type="search" id="departure" placeholder="Departure">
+        <input type="search" id="destination" placeholder="Destination">
         
         <label for="from">From</label>
-        <input type="date" name="from">
+        <input type="date" id="fromDate" name="from">
 
         <label for="from">To</label>
-        <input type="date" name="to">
+        <input type="date" id="toDate" name="to">
 
         <!-- <label for="people">Passengers</label>
         <input type="number" min="1" max="10" value="1" name="people"> -->
 
-        <input type="submit" value="Search">
-      </form>
+        <input type="submit" onclick="save()" value="Search">
+      </div>
       
       <form class="flex-checks">
         <input type="checkbox" name="check1" value="Bike">checkbox<br>
@@ -118,6 +119,25 @@
     $(".toggleNav").click( function(){
       $(".flex-nav ul").toggleClass("open");
     });
+
+    function save() {
+
+    	console.log("HEJ");
+
+      	var inputs = $('input, textarea, select')
+                .not(':input[type=button], :input[type=submit], :input[type=reset]');
+
+                $(inputs).each(function(){    
+            var id = $(this).attr('id');
+            var value = $(this).val();
+            localStorage.setItem(id, value);
+        });  
+
+        document.location = "result.html"; 
+        
+    };
+
+
 
     
     // ...

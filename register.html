@@ -15,6 +15,7 @@
       
       <div class="nav-left">
         <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <a href="index.html"> <h3>BusinessBook</h3></a>
       </div>
 
 
@@ -42,18 +43,18 @@
     <div  class="flex-form-reg" >
 
       <h3>First Name</h3>
-      <input type="text" placeholder="First Name" required>
+      <input type="text" id="firstName" placeholder="First Name" required>
 
       <h3>Last Name</h3>
-      <input type="text" placeholder="Last Name" required>
+      <input type="text" id="lastName" idplaceholder="Last Name" required>
 
       <h3>Email</h3>
-      <input class="regForm-Email" type="email" placeholder="Email address" required>
+      <input class="regForm-Email" id="email" type="email" placeholder="Email address" required>
 
       <h3>Password</h3>
-      <input class="regForm-Pass" type="password" placeholder="Password" required>
+      <input class="regForm-Pass" id="password" type="password" placeholder="Password" required>
 
-      <input class="regForm-btn" type="submit" value="REGISTER">
+      <input class="regForm-btn" type="submit" onclick="save()" value="REGISTER">
 
     </div>
 
@@ -71,6 +72,21 @@
     $(".toggleNav").click( function(){
       $(".flex-nav ul").toggleClass("open");
     });
+
+
+    function save() {
+
+      var inputs = $('input, textarea, select')
+                .not(':input[type=button], :input[type=submit], :input[type=reset]');
+
+
+        $(inputs).each(function(){    
+            var id = $(this).attr('id');
+            var value = $(this).val();
+            localStorage.setItem(id, value);
+        });  
+        document.location = "login.html"; 
+    };
 
 
 
