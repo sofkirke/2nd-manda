@@ -2,6 +2,8 @@
 @import "index.scss";
 @import "result.scss";
 @import "payment.scss";
+@import "register.scss";
+@import "login.scss";
 @import "colors.scss";
 
 * {
@@ -75,8 +77,9 @@ body {
 
 footer {  
   font-family: 'Julius Sans One', sans-serif;
-   left:0px;
+   left:0;
    bottom:0;
+   right: 0;
    height:45px;
    width:100%;
    display: flex;
