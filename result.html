@@ -65,23 +65,23 @@
 
             <div class="classContainer">
 
-                <div class="classes">
+                <form class="classes">
 
                     <div class="firstClass">
-                        <input type="radio" name="Something" value="Something" checked>
+                        <input type="radio" name="Class"  id="class_First" value="3999" onClick="AddClass()" checked>
                         <label>First Class</label>
                     </div>
 
                     <div class="businessClass">
-                        <input type="radio" name="Something" value="Something" checked>
+                        <input type="radio" name="Class" id="class_Bus" value="2499" onClick="AddClass()" checked>
                         <label>Business Class</label>
                     </div>
 
                     <div class="economyClass">
-                        <input type="radio" name="Something" value="Something" checked>
+                        <input type="radio" name="Class" id="class_Eco" value="0" onClick="AddClass()" checked>
                         <label>Economy Class</label>
                     </div>
-                </div>
+                </form>
 
             </div>
 
@@ -186,8 +186,8 @@
 
                                 <div class="priceContainer">
                                     <h2>Total Price:</h2>
-                                    <h3>2950 DKK</h3>
-                                    <h5>Per Ticket</h5>
+                                    <h3> <span class="result-finalPrice1">2950</span> DKK</h3>
+                                    <h5>inkl. moms</h5>
                                 </div>
 
                                 <div class="selectTravelContainer">
@@ -295,8 +295,8 @@
 
                                 <div class="priceContainer">
                                     <h2>Total Price:</h2>
-                                    <h3>6890 DKK</h3>
-                                    <h5>Per Ticket</h5>
+                                    <h3> <span class="result-finalPrice2">6890</span> DKK</h3>
+                                    <h5>inkl. moms</h5>
                                 </div>
 
                                 <div class="selectTravelContainer">
@@ -404,8 +404,8 @@
 
                                 <div class="priceContainer">
                                     <h2>Total Price:</h2>
-                                    <h3>7459 DKK</h3>
-                                    <h5>Per Ticket</h5>
+                                    <h3> <span class="result-finalPrice3">7459</span> DKK</h3>
+                                    <h5>inkl. moms</h5>
                                 </div>
 
                                 <div class="selectTravelContainer">
@@ -426,5 +426,55 @@
                 <p>Copyright @Interface Design Gr 9 2017</p>
             </footer>
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+
+
+            $(".toggleNav").click( function(){
+                $(".flex-nav ul").toggleClass("open");
+            });
+
+            var thePrice1 = parseInt($(".result-finalPrice1").text());
+            var thePrice2 = parseInt($(".result-finalPrice2").text());
+            var thePrice3 = parseInt($(".result-finalPrice3").text());
+
+            function AddClass() {
+                if (document.getElementById("class_First").checked == true) {
+                    var ekstraPrice = 3999;
+                    var newPrice1 = thePrice1 + ekstraPrice;
+                    var newPrice2 = thePrice2 + ekstraPrice;
+                    var newPrice3 = thePrice3 + ekstraPrice;
+                    $(".result-finalPrice1").text(newPrice1);
+                    $(".result-finalPrice2").text(newPrice2);
+                    $(".result-finalPrice3").text(newPrice3);
+                }
+                else if (document.getElementById("class_Bus").checked == true) {
+                    var ekstraPrice = 2499;
+                    var newPrice1 = thePrice1 + ekstraPrice;
+                    var newPrice2 = thePrice2 + ekstraPrice;
+                    var newPrice3 = thePrice3 + ekstraPrice;
+                    $(".result-finalPrice1").text(newPrice1);
+                    $(".result-finalPrice2").text(newPrice2);
+                    $(".result-finalPrice3").text(newPrice3);
+                }
+                else {
+                    var ekstraPrice = 0;
+                    var newPrice1 = thePrice1 + ekstraPrice;
+                    var newPrice2 = thePrice2 + ekstraPrice;
+                    var newPrice3 = thePrice3 + ekstraPrice;
+                    $(".result-finalPrice1").text(newPrice1);
+                    $(".result-finalPrice2").text(newPrice2);
+                    $(".result-finalPrice3").text(newPrice3);
+                }
+            
+            }
+
+            
+            // ...
+
+        </script>
+
+
     </body>
 </html>
