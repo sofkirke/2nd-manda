@@ -9,37 +9,52 @@
 		text-align: center;
 	}
 
-	.flex-form-login {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		flex-direction: column;
+	.login-container {
 
-		input {
-			padding: 15px;
-			width: 40%;
-			margin-bottom: 10px;
+		display: flex;
+        justify-content: center;
+        align-content: center;
+
+
+
+		.flex-form-login {
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-basis: 100%;
 			text-align: center;
+			flex-direction: column;
+			margin-top: 35px;
+
+			input {
+				padding: 15px;
+				width: 40%;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+
+			input[type="submit"] {
+			    background: $lightBlue;
+			    border: none;
+			    color: $white;
+			    margin-top: 20px;
+			    padding: 30px;
+			    font-size: 1.3em;
+	  			font-family: 'Julius Sans One', sans-serif;
+			 }				
 		}
 
-		input[type="submit"] {
-		    background: $lightBlue;
-		    border: none;
-		    color: $white;
-		    margin-top: 20px;
-		    padding: 30px;
-		    font-size: 1.3em;
-  			font-family: 'Julius Sans One', sans-serif;
-		 }				
 	}
+
+	
 
 }
 
 @media screen and (min-width: 721px) and (max-width: 1000px) {
 
 
-  .register{
+  .login-page{
   	font-size: 0.8em;
 
     flex-wrap: wrap;
@@ -55,7 +70,7 @@
 
 @media screen and (min-width: 501px) and (max-width: 720px) {
 
-  .register{
+  .login-page{
 
   	font-size: 0.6em;
 
@@ -73,7 +88,7 @@
 @media screen and (max-width: 500px) {
   
 
-  .register{
+  .login-page{
 
   	font-size: 0.6em;
     flex-wrap: wrap;
