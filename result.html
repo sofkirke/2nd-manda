@@ -436,6 +436,24 @@
                 $(".flex-nav ul").toggleClass("open");
             });
 
+            var checkUser = localStorage.getItem("firstName");
+
+            console.log(checkUser);
+
+            if (checkUser !== null){
+                $(".registerUser").hide();
+                $(".LogIn").hide();
+                $(".showUserName").show();
+                $(".profilePage").show();
+                $(".logOut").show();
+            } else {
+                $(".registerUser").show();
+                $(".LogIn").show();
+                $(".showUserName").hide();
+                $(".profilePage").hide();
+                $(".logOut").hide();
+            }
+
             var thePrice1 = parseInt($(".result-finalPrice1").text());
             var thePrice2 = parseInt($(".result-finalPrice2").text());
             var thePrice3 = parseInt($(".result-finalPrice3").text());
@@ -470,7 +488,6 @@
                 }
             
             }
-
             
             // ...
 

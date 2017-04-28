@@ -619,6 +619,24 @@ body #pm-price-title {
     flex-wrap: wrap; }
     .login-page input {
       width: 90% !important; } }
+.cover-index-profile {
+  height: 86vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18159367_10212154670799427_1491287755_o.png?oh=b8541753f181cae0f56adee19fd1343e&oe=5901B9A8");
+  background-size: cover; }
+
+@media screen and (min-width: 721px) and (max-width: 1000px) {
+  .cover-index {
+    height: 60vh; } }
+@media screen and (min-width: 501px) and (max-width: 720px) {
+  .cover-index {
+    height: 60vh; } }
+@media screen and (max-width: 500px) {
+  .cover-index {
+    height: 60vh; } }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

@@ -88,7 +88,23 @@
         document.location = "login.html"; 
     };
 
+    var checkUser = localStorage.getItem("firstName");
 
+    console.log(checkUser);
+
+    if (checkUser !== null){
+      $(".registerUser").hide();
+      $(".LogIn").hide();
+      $(".showUserName").show();
+      $(".profilePage").show();
+      $(".logOut").show();
+    } else {
+      $(".registerUser").show();
+      $(".LogIn").show();
+      $(".showUserName").hide();
+      $(".profilePage").hide();
+      $(".logOut").hide();
+    }
 
     
     // ...
