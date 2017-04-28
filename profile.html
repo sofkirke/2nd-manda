@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <header class="top">
+    <nav class="flex-nav">
+
+        <div class="nav-left">
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <a href="index.html"> <h3>BusinessBook</h3></a>
+        </div>
+
+
+        <div class="nav-right">
+            <a href="#" class="toggleNav"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+            <ul>
+                <li class="registerUser"><a href="register.html">Register</a></li>
+                <li class="LogIn"><a href="login.html">Login</a></li>
+                <li>Welcome <span class="showUserName">Peter!</span></li>
+                <li class="profilePage"><a href="#">Your profile</a></li>
+                <li class="logOut"><a href="#">Log out</a></li>
+                <!-- <li><a href="#">Change to personal mode</a></li> -->
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <body>
+        <div class="cover-index-profile">
+
+        </div>
+
+        <footer>
+            <p>Copyright @Interface Design Gr 9 2017</p>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+
+            var checkUser = localStorage.getItem("firstName");
+
+            console.log(checkUser);
+
+            if (checkUser !== null){
+                $(".registerUser").hide();
+                $(".LogIn").hide();
+                $(".showUserName").show();
+                $(".profilePage").show();
+                $(".logOut").show();
+            } else {
+                $(".registerUser").show();
+                $(".LogIn").show();
+                $(".showUserName").hide();
+                $(".profilePage").hide();
+                $(".logOut").hide();
+            }
+
+        </script>
+    </body>
+</html>
