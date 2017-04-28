@@ -627,15 +627,40 @@ body #pm-price-title {
   align-items: center;
   background-image: url("https://scontent.xx.fbcdn.net/v/t35.0-12/s2048x2048/18159367_10212154670799427_1491287755_o.png?oh=b8541753f181cae0f56adee19fd1343e&oe=5901B9A8");
   background-size: cover; }
+  .cover-index-profile .user-information-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    height: 65%;
+    width: 80%;
+    display: flex;
+    flex-direction: row; }
+    .cover-index-profile .user-information-container .user-profile {
+      display: flex;
+      height: 100%;
+      margin-right: 2%; }
+      .cover-index-profile .user-information-container .user-profile .profile-picture {
+        height: 100%; }
+    .cover-index-profile .user-information-container .user-information {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5%; }
+      .cover-index-profile .user-information-container .user-information .user-name {
+        color: white;
+        font-size: 30px;
+        margin: 5% 0; }
+      .cover-index-profile .user-information-container .user-information .user-company {
+        color: white;
+        font-size: 22px; }
 
 @media screen and (min-width: 721px) and (max-width: 1000px) {
-  .cover-index {
+  .cover-index-profile {
     height: 60vh; } }
 @media screen and (min-width: 501px) and (max-width: 720px) {
-  .cover-index {
+  .cover-index-profile {
     height: 60vh; } }
 @media screen and (max-width: 500px) {
-  .cover-index {
+  .cover-index-profile {
     height: 60vh; } }
 * {
   -webkit-box-sizing: border-box;
