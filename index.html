@@ -41,25 +41,25 @@
     <div class="search-bar">
 
       <div  class="flex-form">
-        <input type="search" id="departure" placeholder="Departure">
-        <input type="search" id="destination" placeholder="Destination">
+        <input type="search" id="departure" placeholder="Destination">
+        <input type="search" id="destination" placeholder="Departure">
         
         <label for="from">From</label>
-        <input type="date" id="fromDate" name="from">
+        <input type="date" id="fromDate" max="2025-11-01" min="2017-04-19" name="from">
 
         <label for="from">To</label>
-        <input type="date" id="toDate" name="to">
+        <input type="date" id="toDate" max="2025-11-01" min="2017-04-19" name="to">
 
         <!-- <label for="people">Passengers</label>
         <input type="number" min="1" max="10" value="1" name="people"> -->
 
-        <input type="submit" onclick="save()" value="Search">
+        <input class="searchBtn" type="submit" onclick="save()" value="Search">
       </div>
       
       <form class="flex-checks">
-        <input type="checkbox" name="check1" value="Bike">checkbox<br>
-        <input type="checkbox" name="check2" value="Bike">checkbox<br>
-        <input type="checkbox" name="check2" value="Bike">checkbox<br>
+        <input type="checkbox" name="check1" value="Bike">One-way Trip<br>
+        <input type="checkbox" name="check2" value="Bike">Return Trip<br>
+        <input type="checkbox" name="check2" value="Bike">Direct Flight Preferred<br>
       </form>
 
     </div>
@@ -115,7 +115,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
 
-
     $(".toggleNav").click( function(){
       $(".flex-nav ul").toggleClass("open");
     });
@@ -133,8 +132,7 @@
             localStorage.setItem(id, value);
         });  
 
-        document.location = "result.html"; 
-        
+        document.location = "result.html";
     };
 
     var checkUser = localStorage.getItem("firstName");
@@ -154,7 +152,6 @@
       $(".profilePage").hide();
       $(".logOut").hide();
     }
-
     
     // ...
 
