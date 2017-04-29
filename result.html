@@ -410,7 +410,7 @@
                                 </div>
 
                                 <div class="selectTravelContainer">
-                                    <button><a href="payment.html">BOOK</a></button>
+                                    <button id="bookBtn">BOOK</button>
                                 </div>
 
                             </div>
@@ -423,6 +423,93 @@
 
             </div>
 
+            <div class="payment-container">
+                <div id="payment">
+                    <div id="pm-left-wrapper">
+                        <div class="pm-upper-wrapper">
+                            <div id="pm-info-wrapper">
+                                <div id="pm-info-title">
+                                    <h2>User Info</h2>
+                                </div>
+                                <div id="pm-info-content">
+                                    <!--<p>Name: <span class="pay-user-name"> Jens Jensen</span></p>-->
+                                    <!--<p>Address: <br><span class="pay-user-address"> Road 52, 2. tv</span><br><span class="pay-user-zip">4568</span><span class="pay-user-town"> Townvillage</span></p>-->
+                                    <!--<p>Email: <span class="pay-user-email">jens@email.com</span></p>-->
+                                    <!--<p>Phone: <span class="pay-user-phone"> +45 1245 6789</span></p>-->
+                                </div>
+                            </div>
+                            <div id="pm-payment-wrapper">
+                                <div id="pm-payment-title">
+                                    <h2>Payment</h2>
+                                </div>
+                                <div id="pm-payment-content">
+                                    <p>Card Type:</p>
+                                    <input type="text" placeholder="Card Type">
+                                    <p>Card Number:</p>
+                                    <input type="text" placeholder="Card Number">
+                                    <p>Card Expiration Date:</p>
+                                    <input type="date" placeholder="Card ExDate">
+                                    <p>Card CVC:</p>
+                                    <input type="text" placeholder="Card CVC">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pm-lower-wrapper">
+
+                            <div id="pm-addons">
+                                <div id="pm-addons-title">
+                                    <h2>Add ons</h2>
+                                </div>
+                                <div id="pm-addons-content">
+                                    <div id="pm-addons-content-left">
+                                        <p>Insurance in case of cancellation</p>
+                                        <p>Ekstra 20kg Luggage</p>
+                                        <p>Parking at the departure airport</p>
+                                    </div>
+                                    <div id="pm-addons-content-right">
+                                        <input type="checkbox" value="1499">
+                                        <input type="checkbox" value="499">
+                                        <input type="checkbox" value="899">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="pm-right-wrapper">
+
+                        <div id="pm-order-wrapper">
+                            <div id="pm-order-title">
+                                <h2>Order</h2>
+                            </div>
+                            <div id="pm-order-content">
+                                <!--<p>This is some text</p>-->
+                                <!--<p>This is some text</p>-->
+                                <!--<p>This is some text</p>-->
+                            </div>
+                        </div>
+
+                        <div id="pm-price">
+                            <div id="pm-price-upper">
+                                <div id="pm-price-title">
+                                    <p>Total Price</p>
+                                    <h2 class="final-price">3300,-</h2>
+                                </div>
+                                <div>
+                                    <h5>Book Your Next <br> Travel Now</h5>
+                                </div>
+                            </div>
+                            <div id="pm-price-btns">
+                                <button class="btn-cancel"><a href="result.html">Cancel</a></button>
+                                <button class="btn-succes"><a href="confirmation.html">BOOK</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <footer>
                 <p>Copyright @Interface Design Gr 9 2017</p>
             </footer>
@@ -430,7 +517,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>
-
+            $(".payment-container").hide();
 
             $(".toggleNav").click( function(){
                 $(".flex-nav ul").toggleClass("open");
@@ -672,10 +759,53 @@
                 }
             }
 
-            $("#bookTravel").click(function(){
+            $("#bookBtn").click(function(){
+
+                var paymentUserTemplate =
+                    '<p>Name: <span class="pay-user-name">{{name}}</span></p>\
+                     <p>Email: <span class="pay-user-email">{{email}}</span></p>\
+                     <p>Nationality: <span class="pay-user-email">{{nationality}}</span></p>\
+                     <p>Passport Nr: <span class="pay-user-phone">{{passportNr}}</span></p>';
+
+                var userNameFirst = localStorage.getItem("firstName");
+                var userNameLast = localStorage.getItem("lastName");
+                var userEmail = localStorage.getItem("email");
+                var userNationality = localStorage.getItem("nationality");
+                var userPassportNr = localStorage.getItem("passportNr");
+
+                var paymentUserInfoTemp = paymentUserTemplate.replace("{{name}}", userNameFirst + " " + userNameLast);
+                paymentUserInfoTemp = paymentUserInfoTemp.replace("{{email}}", userEmail);
+                paymentUserInfoTemp = paymentUserInfoTemp.replace("{{nationality}}", userNationality);
+                paymentUserInfoTemp = paymentUserInfoTemp.replace("{{passportNr}}", userPassportNr);
+
+                $("#pm-info-content").append(paymentUserInfoTemp);
+
+                var paymentFlightInfo =
+                    '<div id="pm-order-content">\
+                        <p>Travel information</p>\
+                        <p>Destination: {{destination}}</p>\
+                        <p>Departure: {{departure}}</p>\
+                        <p>From: {{fromDate}}</p>\
+                        <p>To: {{toDate}}</p>\
+                    </div>';
+
+                var destination = localStorage.getItem("destination");
+                var departure = localStorage.getItem("departure");
+                var toDate = localStorage.getItem("toDate");
+                var fromDate = localStorage.getItem("fromDate");
+
+                var paymentFlightInfos = paymentFlightInfo.replace("{{destination}}", destination);
+                paymentFlightInfos = paymentFlightInfos.replace("{{departure}}", departure);
+                paymentFlightInfos = paymentFlightInfos.replace("{{fromDate}}", fromDate);
+                paymentFlightInfos = paymentFlightInfos.replace("{{toDate}}", toDate);
+
+                $("#pm-order-content").append(paymentFlightInfos);
+
+                $(".resultContainer").hide();
+                $(".classContainer").hide();
+                $(".payment-container").show();
 
                 localStorage.setItem("ticketPrice","2985");
-                document.location = "payment.html";
             });
 
         </script>

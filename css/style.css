@@ -262,7 +262,7 @@ body .resultWrapper {
               body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer .toDesitinationContainer .destinationContainer {
                 border: 1px grey;
                 border-style: none none solid none;
-                padding-bottom: 15%; }
+                padding-bottom: 10%; }
               body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer .toDesitinationContainer .dividerContainer {
                 width: 38%;
                 display: flex;
@@ -368,7 +368,6 @@ body .payment-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7)), url("https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/17571255_10211849789497585_1870481032_o.png?oh=4ee2bed841639f3bf963f8e633a9c3ca&oe=58DB6283");
   background-size: cover; }
 body #payment {
   padding: 30px;
@@ -449,21 +448,21 @@ body #pm-price-title {
 
 @media screen and (min-width: 999px) and (max-width: 1400px) {
   body .payment-container {
-    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7)), url("https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/17572043_10211849933861194_647924336_o.png?oh=cd21cfab2e8833b13611ae6eadb155f3&oe=58DB32FD");
+    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7));
     background-size: cover; }
   body #payment {
     font-size: 0.9em;
     flex-basis: 70%; } }
 @media screen and (min-width: 721px) and (max-width: 1000px) {
   body .payment-container {
-    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7)), url("https://scontent-fra3-1.xx.fbcdn.net/v/t35.0-12/17572043_10211849933861194_647924336_o.png?oh=cd21cfab2e8833b13611ae6eadb155f3&oe=58DB32FD");
+    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7));
     background-size: cover; }
   body #payment {
     font-size: 0.8em;
     flex-basis: 80%; } }
 @media screen and (min-width: 501px) and (max-width: 720px) {
   body .payment-container {
-    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7)), url("https://scontent-fra3-1.xx.fbcdn.net/v/t34.0-12/17580057_10211849958781817_2030937439_n.png?oh=48923544cedfc2e23c92dc23fc2f1cff&oe=58DB0BB8");
+    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7));
     background-size: cover; }
   body #payment {
     padding: 10px;
@@ -471,7 +470,7 @@ body #pm-price-title {
     flex-basis: 90%; } }
 @media screen and (max-width: 500px) {
   body .payment-container {
-    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7)), url("https://scontent-fra3-1.xx.fbcdn.net/v/t34.0-12/17578038_10211849993982697_1864148707_n.png?oh=22d058e422dd6587387e591f560a7701&oe=58DB56DE");
+    background: linear-gradient(rgba(253, 253, 253, 0.7), rgba(253, 253, 253, 0.7));
     background-size: cover; }
   body #payment {
     padding: 5px;
