@@ -44,6 +44,7 @@
 .flex-checks {
   display: flex;
   flex-basis: 40%;
+  margin-top: 10px;
   align-items: center;
   color: white; }
   .flex-checks input {
