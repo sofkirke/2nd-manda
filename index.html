@@ -41,19 +41,19 @@
     <div class="search-bar">
 
       <div  class="flex-form">
-        <input type="search" id="departure" placeholder="{{Destination}}">
-        <input type="search" id="destination" placeholder="Departure">
-        
-        <label for="from">From</label>
-        <input type="date" id="fromDate" max="2025-11-01" min="2017-04-19" name="from">
+        <!--<input type="search" id="departure" placeholder="{{Destination}}">-->
+        <!--<input type="search" id="destination" placeholder="Departure">-->
+        <!---->
+        <!--<label for="from">From</label>-->
+        <!--<input type="date" id="fromDate" max="2025-11-01" min="2017-04-19" name="from">-->
 
-        <label for="from">To</label>
-        <input type="date" id="toDate" max="2025-11-01" min="2017-04-19" name="to">
+        <!--<label for="from">To</label>-->
+        <!--<input type="date" id="toDate" max="2025-11-01" min="2017-04-19" name="to">-->
 
-        <!-- <label for="people">Passengers</label>
-        <input type="number" min="1" max="10" value="1" name="people"> -->
+        <!--&lt;!&ndash; <label for="people">Passengers</label>-->
+        <!--<input type="number" min="1" max="10" value="1" name="people"> &ndash;&gt;-->
 
-        <input class="searchBtn" type="submit" onclick="save()" value="Search">
+        <!--<input class="searchBtn" type="submit" onclick="save()" value="Search">-->
       </div>
       
       <form class="flex-checks">
@@ -119,38 +119,42 @@
       $(".flex-nav ul").toggleClass("open");
     });
 
-    function save() {
-
-      	var inputs = $('input, textarea, select')
-                .not(':input[type=button], :input[type=submit], :input[type=reset]');
-
-        $(inputs).each(function(){
-            var id = $(this).attr('id');
-            var value = $(this).val();
-            localStorage.setItem(id, value);
-        });
-
-        document.location = "result.html";
-    };
-
     var checkUser = localStorage.getItem("firstName");
 
     console.log(checkUser);
 
     if (checkUser !== null){
+
+      var searchTemplate =
+        '<input type="search" id="departure" placeholder="{{Departure}}">\
+          <input type="search" id="destination" placeholder="{{Destination}}">\
+          <label for="from">From</label>\
+          <input type="date" id="fromDate" max="2025-11-01" min="2017-04-19" format="dd/mm/yyyy" name="from">\
+          <label for="from">To</label>\
+          <input type="date" id="toDate" max="2025-11-01" min="2017-04-19" format="dd/mm/yyyy" name="to">\
+          <!-- <label for="people">Passengers</label>\
+          <input type="number" min="1" max="10" value="1" name="people"> -->\
+          <input class="searchBtn" type="submit" onclick="save()" value="Search">';
+
+      var changedSearch = searchTemplate.replace("{{Destination}}", "Destination");
+      changedSearch = changedSearch.replace("{{Departure}}", "Departure");
+
+      $(".flex-form").append(changedSearch);
+
+
       var changeNameTemplate =
-        '<ul>\
-          <li class="registerUser"><a href="register.html">Register</a></li>\
-          <li class="LogIn"><a href="login.html">Login</a></li>\
-          <li><span class="showUserName">Welcome {{Peter}}!</span></li>\
-          <li class="profilePage"><a href="profile.html">Your profile</a></li>\
-          <li class="logOut"><a href="logout.html">Log out</a></li>\
-          <!-- <li><a href="#">Change to personal mode</a></li> -->\
-        </ul>';
+              '<ul>\
+                <li class="registerUser"><a href="register.html">Register</a></li>\
+                <li class="LogIn"><a href="login.html">Login</a></li>\
+                <li><span class="showUserName">Welcome {{name}}!</span></li>\
+                <li class="profilePage"><a href="profile.html">Your profile</a></li>\
+                <li class="logOut"><a href="logout.html">Log out</a></li>\
+                <!-- <li><a href="#">Change to personal mode</a></li> -->\
+              </ul>';
 
       var userName = localStorage.getItem("firstName");
 
-      var changedName = changeNameTemplate.replace("{{Peter}}", userName);
+      var changedName = changeNameTemplate.replace("{{name}}", userName);
 
       $(".nav-right").append(changedName);
 
@@ -167,10 +171,19 @@
       $(".logOut").hide();
     }
 
+    function save() {
 
+      	var inputs = $('input, textarea, select')
+                .not(':input[type=button], :input[type=submit], :input[type=reset]');
 
+        $(inputs).each(function(){
+            var id = $(this).attr('id');
+            var value = $(this).val();
+            localStorage.setItem(id, value);
+        });
 
-    // ...
+        document.location = "result.html";
+    };
 
   </script>
 </body>

@@ -11,11 +11,14 @@
 .search-bar {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 70%; }
 
 .flex-form {
   display: flex;
-  flex-basis: 40%; }
+  flex-basis: 40%;
+  justify-content: center;
+  margin: 2% 0; }
   .flex-form input, .flex-form label {
     background-color: #FDFDFD; }
   .flex-form *:not(input[type="date"]) {
@@ -46,7 +49,8 @@
   flex-basis: 40%;
   margin-top: 10px;
   align-items: center;
-  color: white; }
+  color: white;
+  margin: 0 2%; }
   .flex-checks input {
     margin-left: 15px; }
 
@@ -210,7 +214,7 @@ body .resultWrapper {
     margin-top: 2%;
     margin-bottom: 1%; }
     body .resultWrapper .classContainer .classes {
-      width: 100%;
+      width: 70%;
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
@@ -234,7 +238,7 @@ body .resultWrapper {
         body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer {
           height: 20%;
           margin: 1% 5% 0 5%;
-          padding-top: 1%;
+          padding: 1%;
           border: 1px grey solid;
           display: flex;
           background-color: #FDFDFD; }
@@ -252,18 +256,21 @@ body .resultWrapper {
                 height: 50%;
                 margin: 2%;
                 display: flex;
-                flex-direction: row; }
+                flex-direction: row;
+                padding-top: 2%;
+                padding-bottom: 5%; }
               body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer .toDesitinationContainer .destinationContainer {
                 border: 1px grey;
                 border-style: none none solid none;
-                padding-bottom: 5%; }
+                padding-bottom: 15%; }
               body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer .toDesitinationContainer .dividerContainer {
                 width: 38%;
                 display: flex;
                 justify-content: center;
                 align-items: center; }
                 body .resultWrapper .resultContainer .resultsWrapper .travelWrapper .travelContainer .destinationsContainer .toDesitinationContainer .dividerContainer .divider {
-                  width: 100%;
+                  width: 65%;
+                  padding: 5%;
                   margin-top: 20%;
                   border: 1px grey;
                   border-style: none none solid none; }

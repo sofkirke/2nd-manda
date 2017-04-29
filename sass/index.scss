@@ -15,13 +15,15 @@
   background-color: rgba(black, 0.7);
   padding: 20px;
   border-radius: 10px;
+  width: 70%;
 }
 
 
 .flex-form{
-
   display: flex;
   flex-basis: 40%;
+  justify-content: center;
+  margin: 2% 0;
 
   input, label {
   background-color: $white;
@@ -65,6 +67,7 @@
   margin-top: 10px;
   align-items: center;
   color: white;
+  margin: 0 2%;
 
   input {
     margin-left: 15px;
