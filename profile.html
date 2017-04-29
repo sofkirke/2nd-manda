@@ -81,16 +81,26 @@
                 var changeNameProfileTemplate =
                     '<div class="user-information">\
                         <div class="user-name">\
-                            Name: {{Sally Smith}}\
+                            Name: {{name}}\
                         </div>\
                         <div class="user-company">\
                             Company: Some Company\
                         </div>\
+                        <div class="user-passport">\
+                            Passport Number: {{passportNr}}\
+                        </div>\
+                        <div class="user-nationality">\
+                            Nationality: {{nationality}}\
+                        </div>\
                     </div>';
 
                 var userNameLast = localStorage.getItem("lastName");
+                var userPassportNr = localStorage.getItem("passportNr");
+                var userNationality = localStorage.getItem("nationality");
 
-                var changedNameProfile = changeNameProfileTemplate.replace("{{Sally Smith}}", userNameFirst + " " + userNameLast);
+                var changedNameProfile = changeNameProfileTemplate.replace("{{name}}", userNameFirst + " " + userNameLast);
+                changedNameProfile = changedNameProfile.replace("{{passportNr}}", userPassportNr);
+                changedNameProfile = changedNameProfile.replace("{{nationality}}", userNationality);
 
                 $(".user-information-container").append(changedNameProfile);
 

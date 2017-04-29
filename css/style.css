@@ -645,12 +645,20 @@ body #pm-price-title {
     .cover-index-profile .user-information-container .user-information {
       display: flex;
       flex-direction: column;
-      margin-left: 5%; }
+      margin-left: 7%; }
       .cover-index-profile .user-information-container .user-information .user-name {
         color: white;
-        font-size: 30px;
+        font-size: 35px;
         margin: 5% 0; }
       .cover-index-profile .user-information-container .user-information .user-company {
+        color: white;
+        font-size: 22px;
+        margin-bottom: 5%; }
+      .cover-index-profile .user-information-container .user-information .user-passport {
+        color: white;
+        font-size: 22px;
+        margin-bottom: 5%; }
+      .cover-index-profile .user-information-container .user-information .user-nationality {
         color: white;
         font-size: 22px; }
 

@@ -33,17 +33,28 @@
     .user-information{
       display:flex;
       flex-direction: column;
-      margin-left: 5%;
+      margin-left: 7%;
 
       .user-name{
         color: white;
-        font-size:30px;
+        font-size:35px;
         margin: 5% 0;
       }
       .user-company{
         color: white;
         font-size:22px;
+        margin-bottom: 5%;
+      }
 
+      .user-passport{
+        color: white;
+        font-size:22px;
+        margin-bottom: 5%;
+      }
+
+      .user-nationality{
+        color: white;
+        font-size:22px;
       }
     }
   }
