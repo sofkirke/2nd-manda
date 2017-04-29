@@ -96,6 +96,22 @@
     console.log(checkUser);
 
     if (checkUser !== null){
+      var changeNameTemplate =
+              '<ul>\
+                <li class="registerUser"><a href="register.html">Register</a></li>\
+                <li class="LogIn"><a href="login.html">Login</a></li>\
+                <li><span class="showUserName">Welcome {{Peter}}!</span></li>\
+                <li class="profilePage"><a href="profile.html">Your profile</a></li>\
+                <li class="logOut"><a href="logout.html">Log out</a></li>\
+                <!-- <li><a href="#">Change to personal mode</a></li> -->\
+              </ul>';
+
+      var userName = localStorage.getItem("firstName");
+
+      var changedName = changeNameTemplate.replace("{{Peter}}", userName);
+
+      $(".nav-right").append(changedName);
+
       $(".registerUser").hide();
       $(".LogIn").hide();
       $(".showUserName").show();
