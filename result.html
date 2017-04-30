@@ -10,418 +10,8 @@
     </head>
 
     <body>
+
         <div class="resultWrapper">
-
-            <header class="top">
-                <nav class="flex-nav">
-
-                    <div class="nav-left">
-                        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-                        <a href="index.html"> <h3>BusinessBook</h3></a>
-                    </div>
-
-
-                    <div class="nav-right">
-                        <a href="#" class="toggleNav"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
-                        <!--<ul>-->
-                            <!--<li class="registerUser"><a href="register.html">Register</a></li>-->
-                            <!--<li class="LogIn"><a href="login.html">Login</a></li>-->
-                            <!--<li>Welcome <span class="showUserName">{{ Peter! }}</span></li>-->
-                            <!--<li class="profilePage"><a href="profile.html">Your profile</a></li>-->
-                            <!--<li class="logOut"><a href="logout.html">Log out</a></li>-->
-                            <!--&lt;!&ndash; <li><a href="#">Change to personal mode</a></li> &ndash;&gt;-->
-                        <!--</ul>-->
-                    </div>
-                </nav>
-            </header>
-
-            <div class="cover-index">
-
-                <div class="search-bar">
-
-                    <form  class="flex-form" action="result.html">
-                        <!--<input type="search" placeholder="Departure">-->
-                        <!--<input type="search" placeholder="Destination">-->
-
-                        <!--<label for="from">From</label>-->
-                        <!--<input type="date" name="from">-->
-
-                        <!--<label for="from">To</label>-->
-                        <!--<input type="date" name="to">-->
-
-                        <!--&lt;!&ndash; <label for="people">Passengers</label>-->
-                        <!--<input type="number" min="1" max="10" value="1" name="people"> &ndash;&gt;-->
-
-                        <!--<input type="submit" value="Search">-->
-                    </form>
-
-                    <form class="flex-checks">
-                        <input type="checkbox" name="check1" value="Bike">One-way Trip<br>
-                        <input type="checkbox" name="check2" value="Bike">Return Trip<br>
-                        <input type="checkbox" name="check2" value="Bike">Direct Flight Preferred<br>
-                    </form>
-
-                </div>
-            </div>
-
-            <div class="classContainer">
-
-                <form class="classes">
-
-                    <div class="firstClass">
-                        <input type="radio" name="Class"  id="class_First" value="3999" onClick="AddClass()" checked>
-                        <label>First Class</label>
-                    </div>
-
-                    <div class="businessClass">
-                        <input type="radio" name="Class" id="class_Bus" value="2499" onClick="AddClass()" checked>
-                        <label>Business Class</label>
-                    </div>
-
-                    <div class="economyClass">
-                        <input type="radio" name="Class" id="class_Eco" value="0" onClick="AddClass()" checked>
-                        <label>Economy Class</label>
-                    </div>
-                </form>
-
-            </div>
-
-            <div class="resultContainer">
-
-                <div class="resultsWrapper">
-                
-                    <div class="travelWrapper">
-
-                        <div class="travelContainer">
-
-                            <div class="destinationsContainer">
-
-                                <div class="toDesitinationContainer">
-
-                                    <div class="destinationContainer">
-
-                                        <div class="companyContainer" id="SAS">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Scandinavian_Airlines_logo.svg/2000px-Scandinavian_Airlines_logo.svg.png">
-                                        </div>
-
-                                        <div class="destinationCapitalAndTimeContainer1A">
-
-                                            <!--<div class="fromCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="fromTimeContainer">-->
-                                                <!--<h4>14:15</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                        <div class="dividerContainer">
-
-                                            <div class="divider">
-
-                                                <h5>3h 10min</h5>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="arrivalCapitalAndTimeContainer1A">
-
-                                            <!--<div class="toCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="toTimeContainer">-->
-                                                <!--<h4>17:25</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="arrivalContainer">
-
-                                        <div class="companyContainer" id="Lufthansa">
-                                            <img src="https://static1.squarespace.com/static/55b91d41e4b0e176420df76f/5652150de4b0a376ef825f9e/5652150ee4b085e3bb8be4c5/1448236605464/lufthansa+logo.jpg">
-                                        </div>
-
-                                        <div class="destinationCapitalAndTimeContainer1B">
-
-                                            <!--<div class="fromCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="fromTimeContainer">-->
-                                                <!--<h4>20:45</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                        <div class="dividerContainer">
-
-                                            <div class="divider">
-                                                <h5>2h 35min</h5>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="arrivalCapitalAndTimeContainer1B">
-
-                                            <!--<div class="toCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="toTimeContainer">-->
-                                                <!--<h4>23:20</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="priceAndSelectTravelContainer">
-
-                                <div class="priceContainer">
-                                    <h2>Total Price:</h2>
-                                    <h3> <span class="result-finalPrice1">2950</span> DKK</h3>
-                                    <h5>inkl. moms</h5>
-                                </div>
-
-                                <div class="selectTravelContainer">
-                                    <button>BOOK</button>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="travelWrapper">
-
-                        <div class="travelContainer">
-
-                            <div class="destinationsContainer">
-
-                                <div class="toDesitinationContainer">
-
-                                    <div class="destinationContainer">
-
-                                        <div class="companyContainer" id="Emirates">
-                                            <img src="https://netdna.webdesignerdepot.com/uploads/2009/03/emirates_logo2.gif">
-                                        </div>
-
-                                        <div class="destinationCapitalAndTimeContainer2A">
-
-                                            <!--<div class="fromCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="fromTimeContainer">-->
-                                                <!--<h4>11:05</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                        <div class="dividerContainer">
-
-                                            <div class="divider">
-                                                <h5>7h 35min</h5>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="arrivalCapitalAndTimeContainer2A">
-
-                                            <!--<div class="toCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="toTimeContainer">-->
-                                                <!--<h4>18:40</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="arrivalContainer">
-
-                                        <div class="companyContainer" id="SingaporeAirlines">
-                                            <img src="http://logok.org/wp-content/uploads/2014/08/Singapore-Airlines-logo-vertical.png">
-                                        </div>
-
-                                        <div class="destinationCapitalAndTimeContainer2B">
-
-                                            <!--<div class="fromCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="fromTimeContainer">-->
-                                                <!--<h4>13:50</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                        <div class="dividerContainer">
-
-                                            <div class="divider">
-                                                <h5>5h 20min</h5>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="arrivalCapitalAndTimeContainer2B">
-
-                                            <!--<div class="toCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="toTimeContainer">-->
-                                                <!--<h4>19:10</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="priceAndSelectTravelContainer">
-
-                                <div class="priceContainer">
-                                    <h2>Total Price:</h2>
-                                    <h3> <span class="result-finalPrice2">6890</span> DKK</h3>
-                                    <h5>inkl. moms</h5>
-                                </div>
-
-                                <div class="selectTravelContainer">
-                                    <button><a href="payment.html">BOOK</a></button>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="travelWrapper">
-
-                        <div class="travelContainer">
-
-                            <div class="destinationsContainer">
-
-                                <div class="toDesitinationContainer">
-
-                                    <div class="destinationContainer">
-
-                                        <div class="companyContainer" id="AirCanada">
-                                            <img src="http://www.aviationexplorer.com/Airline_Logos/Air_Canada_Airlines_Logos.gif">
-                                        </div>
-
-                                        <div class="destinationCapitalAndTimeContainer3A">
-
-                                            <!--<div class="fromCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="fromTimeContainer">-->
-                                                <!--<h4>22:20</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                        <div class="dividerContainer">
-
-                                            <div class="divider">
-                                                <h5>9h 50min</h5>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="arrivalCapitalAndTimeContainer3A">
-
-                                            <!--<div class="toCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="toTimeContainer">-->
-                                                <!--<h4>08:10</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="arrivalContainer">
-
-                                        <div class="companyContainer" id="Lufthansa">
-                                            <img src="https://static1.squarespace.com/static/55b91d41e4b0e176420df76f/5652150de4b0a376ef825f9e/5652150ee4b085e3bb8be4c5/1448236605464/lufthansa+logo.jpg">
-                                        </div>
-
-                                        <div class="destinationCapitalAndTimeContainer3B">
-
-                                            <!--<div class="fromCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="fromTimeContainer">-->
-                                                <!--<h4>17:05</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-
-                                        <div class="dividerContainer">
-
-                                            <div class="divider">
-                                                <h5>7h 5min</h5>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="arrivalCapitalAndTimeContainer3B">
-
-                                            <!--<div class="toCapitalContainer">-->
-                                                <!--<h3>Some Capital</h3>-->
-                                            <!--</div>-->
-
-                                            <!--<div class="toTimeContainer">-->
-                                                <!--<h4>00:10</h4>-->
-                                            <!--</div>-->
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="priceAndSelectTravelContainer">
-
-                                <div class="priceContainer">
-                                    <h2>Total Price:</h2>
-                                    <h3> <span class="result-finalPrice3">7459</span> DKK</h3>
-                                    <h5>inkl. moms</h5>
-                                </div>
-
-                                <div class="selectTravelContainer">
-                                    <button id="bookBtn">BOOK</button>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
 
             <div class="payment-container">
                 <div id="payment">
@@ -498,16 +88,432 @@
                                     <h2 class="final-price">3300,-</h2>
                                 </div>
                                 <div>
-                                    <h5>Book Your Next <br> Travel Now</h5>
+                                    <h5>Book Your Next</h5>
+                                    <h5>Travel Now</h5>
                                 </div>
                             </div>
                             <div id="pm-price-btns">
-                                <button class="btn-cancel"><a href="result.html">Cancel</a></button>
+                                <button class="btn-cancel">Cancel</button>
                                 <button class="btn-succes"><a href="confirmation.html">BOOK</a></button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="resultContent">
+
+                <header class="top">
+                    <nav class="flex-nav">
+
+                        <div class="nav-left">
+                            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                            <a href="index.html"> <h3>BusinessBook</h3></a>
+                        </div>
+
+
+                        <div class="nav-right">
+                            <a href="#" class="toggleNav"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+                            <!--<ul>-->
+                            <!--<li class="registerUser"><a href="register.html">Register</a></li>-->
+                            <!--<li class="LogIn"><a href="login.html">Login</a></li>-->
+                            <!--<li>Welcome <span class="showUserName">{{ Peter! }}</span></li>-->
+                            <!--<li class="profilePage"><a href="profile.html">Your profile</a></li>-->
+                            <!--<li class="logOut"><a href="logout.html">Log out</a></li>-->
+                            <!--&lt;!&ndash; <li><a href="#">Change to personal mode</a></li> &ndash;&gt;-->
+                            <!--</ul>-->
+                        </div>
+                    </nav>
+                </header>
+
+                <div class="cover-index">
+
+                    <div class="search-bar">
+
+                        <form  class="flex-form" action="result.html">
+                            <!--<input type="search" placeholder="Departure">-->
+                            <!--<input type="search" placeholder="Destination">-->
+
+                            <!--<label for="from">From</label>-->
+                            <!--<input type="date" name="from">-->
+
+                            <!--<label for="from">To</label>-->
+                            <!--<input type="date" name="to">-->
+
+                            <!--&lt;!&ndash; <label for="people">Passengers</label>-->
+                            <!--<input type="number" min="1" max="10" value="1" name="people"> &ndash;&gt;-->
+
+                            <!--<input type="submit" value="Search">-->
+                        </form>
+
+                        <form class="flex-checks">
+                            <input type="checkbox" name="check1" value="Bike">One-way Trip<br>
+                            <input type="checkbox" name="check2" value="Bike">Return Trip<br>
+                            <input type="checkbox" name="check2" value="Bike">Direct Flight Preferred<br>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="classContainer">
+
+                    <form class="classes">
+
+                        <div class="firstClass">
+                            <input type="radio" name="Class"  id="class_First" value="3999" onClick="AddClass()" checked>
+                            <label>First Class</label>
+                        </div>
+
+                        <div class="businessClass">
+                            <input type="radio" name="Class" id="class_Bus" value="2499" onClick="AddClass()" checked>
+                            <label>Business Class</label>
+                        </div>
+
+                        <div class="economyClass">
+                            <input type="radio" name="Class" id="class_Eco" value="0" onClick="AddClass()" checked>
+                            <label>Economy Class</label>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="resultContainer">
+
+                    <div class="resultsWrapper">
+
+                        <div class="travelWrapper">
+
+                            <div class="travelContainer">
+
+                                <div class="destinationsContainer">
+
+                                    <div class="toDesitinationContainer">
+
+                                        <div class="destinationContainer">
+
+                                            <div class="companyContainer" id="SAS">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Scandinavian_Airlines_logo.svg/2000px-Scandinavian_Airlines_logo.svg.png">
+                                            </div>
+
+                                            <div class="destinationCapitalAndTimeContainer1A">
+
+                                                <!--<div class="fromCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="fromTimeContainer">-->
+                                                <!--<h4>14:15</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                            <div class="dividerContainer">
+
+                                                <div class="divider">
+
+                                                    <h5>3h 10min</h5>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="arrivalCapitalAndTimeContainer1A">
+
+                                                <!--<div class="toCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="toTimeContainer">-->
+                                                <!--<h4>17:25</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="arrivalContainer">
+
+                                            <div class="companyContainer" id="Lufthansa">
+                                                <img src="https://static1.squarespace.com/static/55b91d41e4b0e176420df76f/5652150de4b0a376ef825f9e/5652150ee4b085e3bb8be4c5/1448236605464/lufthansa+logo.jpg">
+                                            </div>
+
+                                            <div class="destinationCapitalAndTimeContainer1B">
+
+                                                <!--<div class="fromCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="fromTimeContainer">-->
+                                                <!--<h4>20:45</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                            <div class="dividerContainer">
+
+                                                <div class="divider">
+                                                    <h5>2h 35min</h5>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="arrivalCapitalAndTimeContainer1B">
+
+                                                <!--<div class="toCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="toTimeContainer">-->
+                                                <!--<h4>23:20</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="priceAndSelectTravelContainer">
+
+                                    <div class="priceContainer">
+                                        <h2>Total Price:</h2>
+                                        <h3> <span class="result-finalPrice1">2950</span> DKK</h3>
+                                        <h5>inkl. moms</h5>
+                                    </div>
+
+                                    <div class="selectTravelContainer">
+                                        <button id="bookBtn">BOOK</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="travelWrapper">
+
+                            <div class="travelContainer">
+
+                                <div class="destinationsContainer">
+
+                                    <div class="toDesitinationContainer">
+
+                                        <div class="destinationContainer">
+
+                                            <div class="companyContainer" id="Emirates">
+                                                <img src="https://netdna.webdesignerdepot.com/uploads/2009/03/emirates_logo2.gif">
+                                            </div>
+
+                                            <div class="destinationCapitalAndTimeContainer2A">
+
+                                                <!--<div class="fromCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="fromTimeContainer">-->
+                                                <!--<h4>11:05</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                            <div class="dividerContainer">
+
+                                                <div class="divider">
+                                                    <h5>7h 35min</h5>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="arrivalCapitalAndTimeContainer2A">
+
+                                                <!--<div class="toCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="toTimeContainer">-->
+                                                <!--<h4>18:40</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="arrivalContainer">
+
+                                            <div class="companyContainer" id="SingaporeAirlines">
+                                                <img src="http://logok.org/wp-content/uploads/2014/08/Singapore-Airlines-logo-vertical.png">
+                                            </div>
+
+                                            <div class="destinationCapitalAndTimeContainer2B">
+
+                                                <!--<div class="fromCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="fromTimeContainer">-->
+                                                <!--<h4>13:50</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                            <div class="dividerContainer">
+
+                                                <div class="divider">
+                                                    <h5>5h 20min</h5>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="arrivalCapitalAndTimeContainer2B">
+
+                                                <!--<div class="toCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="toTimeContainer">-->
+                                                <!--<h4>19:10</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="priceAndSelectTravelContainer">
+
+                                    <div class="priceContainer">
+                                        <h2>Total Price:</h2>
+                                        <h3> <span class="result-finalPrice2">6890</span> DKK</h3>
+                                        <h5>inkl. moms</h5>
+                                    </div>
+
+                                    <div class="selectTravelContainer">
+                                        <button id="bookBtn">BOOK</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="travelWrapper">
+
+                            <div class="travelContainer">
+
+                                <div class="destinationsContainer">
+
+                                    <div class="toDesitinationContainer">
+
+                                        <div class="destinationContainer">
+
+                                            <div class="companyContainer" id="AirCanada">
+                                                <img src="http://www.aviationexplorer.com/Airline_Logos/Air_Canada_Airlines_Logos.gif">
+                                            </div>
+
+                                            <div class="destinationCapitalAndTimeContainer3A">
+
+                                                <!--<div class="fromCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="fromTimeContainer">-->
+                                                <!--<h4>22:20</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                            <div class="dividerContainer">
+
+                                                <div class="divider">
+                                                    <h5>9h 50min</h5>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="arrivalCapitalAndTimeContainer3A">
+
+                                                <!--<div class="toCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="toTimeContainer">-->
+                                                <!--<h4>08:10</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="arrivalContainer">
+
+                                            <div class="companyContainer" id="Lufthansa">
+                                                <img src="https://static1.squarespace.com/static/55b91d41e4b0e176420df76f/5652150de4b0a376ef825f9e/5652150ee4b085e3bb8be4c5/1448236605464/lufthansa+logo.jpg">
+                                            </div>
+
+                                            <div class="destinationCapitalAndTimeContainer3B">
+
+                                                <!--<div class="fromCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="fromTimeContainer">-->
+                                                <!--<h4>17:05</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+
+                                            <div class="dividerContainer">
+
+                                                <div class="divider">
+                                                    <h5>7h 5min</h5>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="arrivalCapitalAndTimeContainer3B">
+
+                                                <!--<div class="toCapitalContainer">-->
+                                                <!--<h3>Some Capital</h3>-->
+                                                <!--</div>-->
+
+                                                <!--<div class="toTimeContainer">-->
+                                                <!--<h4>00:10</h4>-->
+                                                <!--</div>-->
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="priceAndSelectTravelContainer">
+
+                                    <div class="priceContainer">
+                                        <h2>Total Price:</h2>
+                                        <h3> <span class="result-finalPrice3">7459</span> DKK</h3>
+                                        <h5>inkl. moms</h5>
+                                    </div>
+
+                                    <div class="selectTravelContainer">
+                                        <button id="bookBtn">BOOK</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
             <footer>
@@ -518,6 +524,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>
             $(".payment-container").hide();
+
+            $(".btn-cancel").click(function(){
+                $(".payment-container").hide();
+            });
+
+            $(".btn-succes").click(function(){
+                document.location = "confirmation.html";
+            });
 
             $(".toggleNav").click( function(){
                 $(".flex-nav ul").toggleClass("open");
@@ -801,8 +815,6 @@
 
                 $("#pm-order-content").append(paymentFlightInfos);
 
-                $(".resultContainer").hide();
-                $(".classContainer").hide();
                 $(".payment-container").show();
 
                 localStorage.setItem("ticketPrice","2985");
