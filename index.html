@@ -119,11 +119,11 @@
       $(".flex-nav ul").toggleClass("open");
     });
 
-    var checkUser = localStorage.getItem("firstName");
+    var checkUser = localStorage.getItem("active");
 
     console.log(checkUser);
 
-    if (checkUser !== null){
+    if (checkUser !== "no"){
 
       var searchTemplate =
         '<input type="search" id="departure" placeholder="{{Departure}}">\
@@ -148,7 +148,7 @@
                 <li class="LogIn"><a href="login.html">Login</a></li>\
                 <li><span class="showUserName">Welcome {{name}}!</span></li>\
                 <li class="profilePage"><a href="profile.html">Your profile</a></li>\
-                <li class="logOut"><a href="logout.html">Log out</a></li>\
+                <li><a class="logOut" href="logout.html">Log out</a></li>\
                 <!-- <li><a href="#">Change to personal mode</a></li> -->\
               </ul>';
 
@@ -158,12 +158,87 @@
 
       $(".nav-right").append(changedName);
 
-      $(".registerUser").hide();
-      $(".LogIn").hide();
-      $(".showUserName").show();
-      $(".profilePage").show();
-      $(".logOut").show();
+      var userStatus = localStorage.getItem("active");
+
+      var newUserStatus = localStorage.getItem("active");
+      var answerYes = "yes"
+
+      if(newUserStatus == answerYes){
+
+        $(".registerUser").hide();
+        $(".LogIn").hide();
+        $(".showUserName").show();
+        $(".profilePage").show();
+        $(".logOut").show();
+
+      }else{
+
+        $(".registerUser").show();
+        $(".LogIn").show();
+        $(".showUserName").hide();
+        $(".profilePage").hide();
+        $(".logOut").hide();
+      }
+
+      $(".logOut").click(function () {
+
+        localStorage.setItem("active", "no");
+        var newUserStatus = localStorage.getItem("active");
+        var answerYes = "yes"
+
+        if(newUserStatus == answerYes){
+
+          $(".registerUser").hide();
+          $(".LogIn").hide();
+          $(".showUserName").show();
+          $(".profilePage").show();
+          $(".logOut").show();
+
+        }else{
+
+          $(".registerUser").show();
+          $(".LogIn").show();
+          $(".showUserName").hide();
+          $(".profilePage").hide();
+          $(".logOut").hide();
+        }
+
+      });
+
     } else {
+
+      var searchTemplate =
+              '<input type="search" id="departure" placeholder="{{Departure}}">\
+                <input type="search" id="destination" placeholder="{{Destination}}">\
+                <label for="from">From</label>\
+                <input type="date" id="fromDate" max="2025-11-01" min="2017-04-19" format="dd/mm/yyyy" name="from">\
+                <label for="from">To</label>\
+                <input type="date" id="toDate" max="2025-11-01" min="2017-04-19" format="dd/mm/yyyy" name="to">\
+                <!-- <label for="people">Passengers</label>\
+                <input type="number" min="1" max="10" value="1" name="people"> -->\
+                <input class="searchBtn" type="submit" onclick="save()" value="Search">';
+
+      var changedSearch = searchTemplate.replace("{{Destination}}", "Destination");
+      changedSearch = changedSearch.replace("{{Departure}}", "Departure");
+
+      $(".flex-form").append(changedSearch);
+
+      var changeNameTemplate =
+              '<ul>\
+                <li class="registerUser"><a href="register.html">Register</a></li>\
+                <li class="LogIn"><a href="login.html">Login</a></li>\
+                <li><span class="showUserName">Welcome {{name}}!</span></li>\
+                <li class="profilePage"><a href="profile.html">Your profile</a></li>\
+                <li><a class="logOut" href="logout.html">Log out</a></li>\
+                <!-- <li><a href="#">Change to personal mode</a></li> -->\
+              </ul>';
+
+      var userName = localStorage.getItem("firstName");
+
+      var changedName = changeNameTemplate.replace("{{name}}", userName);
+
+      $(".nav-right").append(changedName);
+
       $(".registerUser").show();
       $(".LogIn").show();
       $(".showUserName").hide();

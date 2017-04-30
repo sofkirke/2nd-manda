@@ -62,6 +62,52 @@
             console.log(checkUser);
 
             if (checkUser !== null){
+
+                var newUserStatus = localStorage.getItem("active");
+                var answerYes = "yes"
+
+                if(newUserStatus == answerYes){
+
+                    $(".registerUser").hide();
+                    $(".LogIn").hide();
+                    $(".showUserName").show();
+                    $(".profilePage").show();
+                    $(".logOut").show();
+
+                }else{
+
+                    $(".registerUser").show();
+                    $(".LogIn").show();
+                    $(".showUserName").hide();
+                    $(".profilePage").hide();
+                    $(".logOut").hide();
+                }
+
+                $(".logOut").click(function () {
+
+                    localStorage.setItem("active", "no");
+                    var newUserStatus = localStorage.getItem("active");
+                    var answerYes = "yes"
+
+                    if(newUserStatus == answerYes){
+
+                        $(".registerUser").hide();
+                        $(".LogIn").hide();
+                        $(".showUserName").show();
+                        $(".profilePage").show();
+                        $(".logOut").show();
+
+                    }else{
+
+                        $(".registerUser").show();
+                        $(".LogIn").show();
+                        $(".showUserName").hide();
+                        $(".profilePage").hide();
+                        $(".logOut").hide();
+                    }
+
+                });
+
                 var changeNameNavTemplate =
                         '<ul>\
                           <li class="registerUser"><a href="register.html">Register</a></li>\

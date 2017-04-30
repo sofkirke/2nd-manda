@@ -91,11 +91,12 @@
         
     };
 
-    var checkUser = localStorage.getItem("firstName");
+    localStorage.setItem("active", "yes");
+    var checkUser = localStorage.getItem("active");
 
     console.log(checkUser);
 
-    if (checkUser !== null){
+    if (checkUser !== "no"){
       var changeNameTemplate =
               '<ul>\
                 <li class="registerUser"><a href="register.html">Register</a></li>\
@@ -112,11 +113,11 @@
 
       $(".nav-right").append(changedName);
 
-      $(".registerUser").hide();
-      $(".LogIn").hide();
-      $(".showUserName").show();
-      $(".profilePage").show();
-      $(".logOut").show();
+      $(".registerUser").show();
+      $(".LogIn").show();
+      $(".showUserName").hide();
+      $(".profilePage").hide();
+      $(".logOut").hide();
     } else {
       $(".registerUser").show();
       $(".LogIn").show();
