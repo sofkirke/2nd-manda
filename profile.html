@@ -78,37 +78,240 @@
 
                 $(".nav-right").append(changedNameNav);
 
-                var changeNameProfileTemplate =
-                    '<div class="user-information">\
+                var changeInfoProfileTemplate =
+                    '<div class="user-information" id="oldTemplate">\
                         <div class="user-name">\
-                            Name: {{name}}\
+                            <input id="nameInputFirst" type="text" placeholder="New First Name">\
+                            <input id="nameInputLast" type="text" placeholder="New Last Name">\
+                            <span id="nameTxt">Name: {{name}}</span>\
+                            <button id="nameBtn">Change Name</button>\
+                            <button id="nameNewBtn">Save New Names</button>\
                         </div>\
                         <div class="user-company">\
-                            Company: Some Company\
+                            <span id="companyTxt">Company: Momondo</span>\
                         </div>\
                         <div class="user-passport">\
-                            Passport Number: {{passportNr}}\
+                            <input id="passportInput" type="text" placeholder="New Passport Nr">\
+                            <span id="passportTxt">Passport Number: {{passportNr}}</span>\
+                            <button id="passportBtn">Change Passport Nr</button>\
+                            <button id="passportNewBtn">Save New Passport Nr</button>\
                         </div>\
                         <div class="user-nationality">\
-                            Nationality: {{nationality}}\
+                            <input id="nationalityInput" type="text" placeholder="New Nationality">\
+                            <span id="nationalityTxt">Nationality: {{nationality}}</span>\
+                            <button id="nationalityBtn">Change Nationality</button>\
+                            <button id="nationalityNewBtn">Save New Nationality</button>\
                         </div>\
                     </div>';
 
+                var userNameFirst = localStorage.getItem("firstName");
                 var userNameLast = localStorage.getItem("lastName");
                 var userPassportNr = localStorage.getItem("passportNr");
                 var userNationality = localStorage.getItem("nationality");
 
-                var changedNameProfile = changeNameProfileTemplate.replace("{{name}}", userNameFirst + " " + userNameLast);
-                changedNameProfile = changedNameProfile.replace("{{passportNr}}", userPassportNr);
-                changedNameProfile = changedNameProfile.replace("{{nationality}}", userNationality);
+                var changedInfoProfile = changeInfoProfileTemplate.replace("{{name}}", userNameFirst + " " + userNameLast);
+                changedInfoProfile = changedInfoProfile.replace("{{passportNr}}", userPassportNr);
+                changedInfoProfile = changedInfoProfile.replace("{{nationality}}", userNationality);
 
-                $(".user-information-container").append(changedNameProfile);
+                $(".user-information-container").append(changedInfoProfile);
 
                 $(".registerUser").hide();
                 $(".LogIn").hide();
                 $(".showUserName").show();
                 $(".profilePage").show();
                 $(".logOut").show();
+
+                $("#passportTxt").show();
+                $("#passportBtn").show();
+                $("#passportInput").hide();
+                $("#passportNewBtn").hide();
+
+                $("#passportBtn").click(function(){
+                    $("#passportTxt").hide();
+                    $("#passportBtn").hide();
+                    $("#passportInput").show();
+                    $("#passportNewBtn").show();
+                });
+
+                $("#passportNewBtn").click(function(){
+
+                    $("#oldTemplate").hide();
+
+                    var newPassportNr = $("#passportInput").val();
+                    localStorage.setItem("passportNr", newPassportNr);
+
+                    var changeInfoProfileTemplate =
+                            '<div class="user-information">\
+                                <div class="user-name">\
+                                    Name: {{name}} <button id="changeName">Change Name</button>\
+                                </div>\
+                                <div class="user-company">\
+                                    <span id="companyTxt">Company: Momondo</span>\
+                                </div>\
+                                <div class="user-passport">\
+                                    <input id="passportInputN" type="text" placeholder="New Passport Nr">\
+                                    <span id="passportTxtN">Passport Number: {{passportNr}}</span>\
+                                    <button id="passportBtnN">Change Passport Nr</button>\
+                                    <button id="passportNewBtnN">Save New Passport Nr</button>\
+                                </div>\
+                                <div class="user-nationality">\
+                                    Nationality: {{nationality}} <button id="changeNationality">Change Nationality</button>\
+                                </div>\
+                            </div>';
+
+                    var userNameFirst = localStorage.getItem("firstName");
+                    var userNameLast = localStorage.getItem("lastName");
+                    var getNewPassportNr = localStorage.getItem("passportNr");
+                    var userNationality = localStorage.getItem("nationality");
+
+                    var changedInfoProfile = changeInfoProfileTemplate.replace("{{name}}", userNameFirst + " " + userNameLast);
+                    changedInfoProfile = changedInfoProfile.replace("{{passportNr}}", getNewPassportNr);
+                    changedInfoProfile = changedInfoProfile.replace("{{nationality}}", userNationality);
+
+                    $(".user-information-container").append(changedInfoProfile);
+
+                    $("#passportTxtN").show();
+                    $("#passportBtnN").show();
+                    $("#passportInputN").hide();
+                    $("#passportNewBtnN").hide();
+                });
+
+                $("#nameTxt").show();
+                $("#nameBtn").show();
+                $("#nameInputFirst").hide();
+                $("#nameInputLast").hide();
+                $("#nameNewBtn").hide();
+
+                $("#nameBtn").click(function(){
+                    $("#nameTxt").hide();
+                    $("#nameBtn").hide();
+                    $("#nameInputFirst").show();
+                    $("#nameInputLast").show();
+                    $("#nameNewBtn").show();
+                });
+
+                $("#nameNewBtn").click(function(){
+
+                    $("#oldTemplate").hide();
+
+                    var newFirstName = $("#nameInputFirst").val();
+                    var newLastName = $("#nameInputLast").val();
+                    localStorage.setItem("firstName", newFirstName);
+                    localStorage.setItem("lastName", newLastName);
+
+                    var changeInfoProfileTemplate =
+                            '<div class="user-information">\
+                                <div class="user-name">\
+                                    <input id="nameInputFirstN" type="text" placeholder="New First Name">\
+                                    <input id="nameInputLastN" type="text" placeholder="New Last Name">\
+                                    <span id="nameTxtN">Name: {{name}}</span>\
+                                    <button id="nameBtnN">Change Name</button>\
+                                    <button id="nameNewBtnN">Save New Names</button>\
+                                </div>\
+                                <div class="user-company">\
+                                    <span id="companyTxt">Company: Momondo</span>\
+                                </div>\
+                                <div class="user-passport">\
+                                    <input id="passportInputN" type="text" placeholder="New Passport Nr">\
+                                    <span id="passportTxtN">Passport Number: {{passportNr}}</span>\
+                                    <button id="passportBtnN">Change Passport Nr</button>\
+                                    <button id="passportNewBtnN">Save New Passport Nr</button>\
+                                </div>\
+                                <div class="user-nationality">\
+                                    Nationality: {{nationality}} <button id="changeNationality">Change Nationality</button>\
+                                </div>\
+                            </div>';
+
+                    var userNameFirst = localStorage.getItem("firstName");
+                    var userNameLast = localStorage.getItem("lastName");
+                    var getNewPassportNr = localStorage.getItem("passportNr");
+                    var userNationality = localStorage.getItem("nationality");
+
+                    var changedInfoProfile = changeInfoProfileTemplate.replace("{{name}}", userNameFirst + " " + userNameLast);
+                    changedInfoProfile = changedInfoProfile.replace("{{passportNr}}", getNewPassportNr);
+                    changedInfoProfile = changedInfoProfile.replace("{{nationality}}", userNationality);
+
+                    $(".user-information-container").append(changedInfoProfile);
+
+                    $("#nameTxtN").show();
+                    $("#nameBtnN").show();
+                    $("#nameInputFirstN").hide();
+                    $("#nameInputLastN").hide();
+                    $("#nameNewBtnN").hide();
+
+                    $("#passportInputN").hide();
+                    $("#passportNewBtnN").hide();
+                });
+
+                $("#nationalityTxt").show();
+                $("#nationalityBtn").show();
+                $("#nationalityInput").hide();
+                $("#nationalityNewBtn").hide();
+
+                $("#nationalityBtn").click(function(){
+                    $("#nationalityTxt").hide();
+                    $("#nationalityBtn").hide();
+                    $("#nationalityInput").show();
+                    $("#nationalityNewBtn").show();
+                });
+
+                $("#nationalityNewBtn").click(function(){
+
+                    $("#oldTemplate").hide();
+
+                    var newNationality = $("#nationalityInput").val();
+                    localStorage.setItem("nationality", newNationality);
+
+                    var changeInfoProfileTemplate =
+                            '<div class="user-information">\
+                                <div class="user-name">\
+                                    <input id="nameInputFirstN" type="text" placeholder="New First Name">\
+                                    <input id="nameInputLastN" type="text" placeholder="New Last Name">\
+                                    <span id="nameTxtN">Name: {{name}}</span>\
+                                    <button id="nameBtnN">Change Name</button>\
+                                    <button id="nameNewBtnN">Save New Names</button>\
+                                </div>\
+                                <div class="user-company">\
+                                    <span id="companyTxt">Company: Momondo</span>\
+                                </div>\
+                                <div class="user-passport">\
+                                    <input id="passportInputN" type="text" placeholder="New Passport Nr">\
+                                    <span id="passportTxtN">Passport Number: {{passportNr}}</span>\
+                                    <button id="passportBtnN">Change Passport Nr</button>\
+                                    <button id="passportNewBtnN">Save New Passport Nr</button>\
+                                </div>\
+                                <div class="user-nationality">\
+                                    <input id="nationalityInputN" type="text" placeholder="New Nationality">\
+                                    <span id="nationalityTxtN">Nationality: {{nationality}}</span>\
+                                    <button id="nationalityBtnN">Change Nationality</button>\
+                                    <button id="nationalityNewBtnN">Save New Nationality</button>\
+                                </div>\
+                            </div>';
+
+                    var userNameFirst = localStorage.getItem("firstName");
+                    var userNameLast = localStorage.getItem("lastName");
+                    var getNewPassportNr = localStorage.getItem("passportNr");
+                    var userNationality = localStorage.getItem("nationality");
+
+                    var changedInfoProfile = changeInfoProfileTemplate.replace("{{name}}", userNameFirst + " " + userNameLast);
+                    changedInfoProfile = changedInfoProfile.replace("{{passportNr}}", getNewPassportNr);
+                    changedInfoProfile = changedInfoProfile.replace("{{nationality}}", userNationality);
+
+                    $(".user-information-container").append(changedInfoProfile);
+
+                    $("#nationalityTxtN").show();
+                    $("#nationalityBtnN").show();
+                    $("#nationalityInputN").hide();
+                    $("#nationalityNewBtnN").hide();
+
+                    $("#nameInputFirstN").hide();
+                    $("#nameInputLastN").hide();
+                    $("#nameNewBtnN").hide();
+
+                    $("#passportInputN").hide();
+                    $("#passportNewBtnN").hide();
+                });
+
             } else {
                 $(".registerUser").show();
                 $(".LogIn").show();
